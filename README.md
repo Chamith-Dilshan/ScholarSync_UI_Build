@@ -35,7 +35,7 @@ Happy coding!!!
 ## Contributing
 Development Team-
 1. K.P.K.C Dilshan : https://github.com/Chamith-Dilshan
-2. yasho
+2. D.Y.P.V. Mendis : https://github.com/Yashod-Mendis
 3. M.A.G.H.P. Mallawaarachchi : https://github.com/MAGHPMallawaarachchi
 4. T.G.M. Seneka : https://github.com/tgmseneka
 5. M.K.P.N Joanne : https://github.com/MKPNJoanne
