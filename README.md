@@ -16,17 +16,17 @@ This application provides the following features:
 ## Installation
 
 If you only need to build the front end you don't need to follow all these instructions
-this instructions for creating and connecting appwrite to the flutter application.
+these instructions are for creating and connecting appwrite to the Flutter application.
 To get started with the Scholars Mobile App, follow these steps:
 
-1. Intall Docker:https://www.docker.com/
+1. Install Docker:https://www.docker.com/
 2. Open CMD and install the AppWrite with Docker: you can find the instructions on the Appwrite Documents.
-3. Now open Docker and see wether the appwrite running on docker.
-4. Go to the web Browser and type and search localhost: the port number should the one you gave in the installation(deafault one is 80).
+3. Now open Docker and see whether the appwrite is running on Docker.
+4. Go to the web browser and type and search localhost: the port number should be the one you gave in the installation(default one is 80).
 5. Create an Appwrite account if you don't have one.
 6. Create a new project
 7. Create a flutter project.
-8. Go to the Dashboard  and add a new flutter platform: package name can be found in build.gradle file -> default config (for android)
+8. Go to the Dashboard  and add a new flutter platform: the package name can be found in build.gradle file -> default config (for Android)
 9. Add dependances(appwrite, cupertino_icons, flutter_riverpod, flutter_svg, fpdart):  `flutter pub add`.
 10. Create a Database in Appwrite.
     
@@ -47,5 +47,5 @@ Figma Design : https://www.figma.com/file/S6jLzZpFsa21nJdHaOzDvx/Uni-Portal?node
 
 This project is licensed under the [MIT License](LICENSE).
 
-For more information or questions, please contact me.
+For more information or questions, contact me.
 
