@@ -1,6 +1,5 @@
 class IconConstants{
   static const String _svgPath = 'assets/icons';
-  static const String logoNSBMIcon = '$_svgPath/logo_nsbm.svg';
   static const String bellFilledIcon = '$_svgPath/bell_filled.svg';
   static const String bellOutlinedIcon = '$_svgPath/bell_outlined.svg';
   static const String googleDriveIcon = '$_svgPath/google_drive.svg';
