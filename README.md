@@ -1,6 +1,6 @@
-# Scholars_MobileAPP_frontend
+# ScholarSync_frontend
 
-Hello! Welcome to the Scholars Mobile App Frontend repository.
+Hello! Welcome to the ScholarSync Mobile App Frontend repository.
 
 This application provides the following features:
 
@@ -11,13 +11,13 @@ This application provides the following features:
 5. A place to find and post study group and kuppi session details.
 6. A platform to share knowledge.
 
-![Scholars Mobile App Screenshot](./screenshot.png)
+![ScholarSync Mobile App Screenshot](./screenshot.png)
 
 ## Installation
 
 If you only need to build the front end you don't need to follow all these instructions
 these instructions are for creating and connecting appwrite to the Flutter application.
-To get started with the Scholars Mobile App, follow these steps:
+To get started with the ScholarSync Mobile App, follow these steps:
 
 1. Install Docker:https://www.docker.com/
 2. Open CMD and install the AppWrite with Docker: you can find the instructions on the Appwrite Documents.
