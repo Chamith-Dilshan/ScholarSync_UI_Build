@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:scholars_mobileapp/common/rounded_small_button.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/image_constants.dart';
 import 'package:scholars_mobileapp/features/widgets/auth_field.dart';
-import 'package:scholars_mobileapp/theme/pallete.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -12,14 +13,15 @@ class LogInPage extends StatefulWidget {
 }
 
 class _LogInPageState extends State<LogInPage> {
-  final emailcontroller = TextEditingController();
-  final passwordcontroller = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  bool isChecked= false;
 
   @override
   void dispose(){
     super.dispose();
-    emailcontroller.dispose();
-    passwordcontroller.dispose();
+    emailController.dispose();
+    passwordController.dispose();
   }
 
   @override
@@ -42,10 +44,10 @@ class _LogInPageState extends State<LogInPage> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Container(
-              width: 400,
+              width: 350,
               height: 400,
               decoration: const BoxDecoration(
-                color: Pallete.lightbackgroundColor,
+                color: Palette.lightBackgroundColor,
               ),
               child: Column(
                 children: [
@@ -58,38 +60,66 @@ class _LogInPageState extends State<LogInPage> {
                   ),
                   const SizedBox(height: 0),
                   // Text field
-                  AuthField(
-                    controller: emailcontroller,
-                    hintText: 'Email',
-                    fontsize: 14,
-                  ),
-                  const SizedBox(height: 25),
-                  // Text field
-                  AuthField(
-                    controller: passwordcontroller,
-                    hintText: 'Password',
-                    fontsize: 14,
-                  ),
-                  const SizedBox(height: 25),
-                  // Text span
-                  RichText(
-                    text: const TextSpan(
-                      text: "Remember me",
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Pallete.textColor,
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: AuthField(
+                      controller: emailController,
+                      hintText: 'Email',
+                      fontSize: 14,
+                      frontIcon: IconConstants.mailIcon,
                     ),
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 15),
+                  // Text field
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: AuthField(
+                      controller: passwordController,
+                      hideText: true,
+                      hintText: 'Password',
+                      fontSize: 14,
+                      frontIcon: IconConstants.lockIcon,
+                      backIcon: IconConstants.eyeOpenIcon, 
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  // Text span
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Checkbox(value: isChecked,
+                        activeColor: Palette.lightGreenColor,
+                        tristate: false, 
+                        onChanged:(bool? value){
+                          setState(() {
+                            isChecked = value ?? false;
+                          });
+                        } ,
+                        shape: const CircleBorder(),
+                        ),
+                        RichText(
+                          text: const TextSpan(
+                            text: "Remember me",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Palette.textColor,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 10),
                   // Button
                   Align(
                     alignment: Alignment.center,
                     child: RoundedSmallbutton(
                       onTap: () {},
                       lable: 'Login',
-                      backgroundColor: Pallete.ligtgreenColor,
-                      textColor: Pallete.textColor,
+                      backgroundColor: Palette.lightGreenColor,
+                      textColor: Palette.lightBackgroundColor,
                       fontsize: 14,
                     ),
                   ),

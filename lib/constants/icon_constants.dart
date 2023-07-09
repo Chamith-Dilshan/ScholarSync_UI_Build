@@ -21,4 +21,5 @@ class IconConstants{
   static const String eyeOpenIcon = '$_svgPath/eye_open.svg';
   static const String eyeCloseIcon = '$_svgPath/eye_close.svg';
   static const String leftArrowIcon = '$_svgPath/left_arrow.svg';
+  static const String lockIcon = '$_svgPath/lock.svg';
 }

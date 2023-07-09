@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/theme/pallete.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
 
 //use this class to change the theme color of the app
 class AppThemeLight{
   static ThemeData theme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: Pallete.lightbackgroundColor,
+    scaffoldBackgroundColor: Palette.lightBackgroundColor,
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: Pallete.lightbackgroundColor,
+      backgroundColor: Palette.lightBackgroundColor,
       elevation: 0,
     ),
 
@@ -16,10 +16,10 @@ class AppThemeLight{
 
 class AppThemeDark{
   static ThemeData theme = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: Pallete.darkbackgroundColor,
+    scaffoldBackgroundColor: Palette.darkBackgroundColor,
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: Pallete.darkbackgroundColor,
+      backgroundColor: Palette.darkBackgroundColor,
       elevation: 0,
     ),
   );
