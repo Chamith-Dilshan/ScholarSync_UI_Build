@@ -15,6 +15,7 @@ class LogInPage extends StatefulWidget {
 class _LogInPageState extends State<LogInPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final notificationController = TextEditingController();
   bool isChecked= false;
 
   @override
@@ -22,6 +23,7 @@ class _LogInPageState extends State<LogInPage> {
     super.dispose();
     emailController.dispose();
     passwordController.dispose();
+    notificationController.dispose();
   }
 
   @override
@@ -112,7 +114,7 @@ class _LogInPageState extends State<LogInPage> {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  // Button
+                  //button
                   Align(
                     alignment: Alignment.center,
                     child: RoundedSmallbutton(
