@@ -23,7 +23,7 @@ class _LogInPageState extends State<LogInPage> {
     super.dispose();
     emailController.dispose();
     passwordController.dispose();
-    notificationController.dispose();
+    
   }
 
   @override
