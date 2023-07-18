@@ -15,7 +15,7 @@ class ButtonIcon extends StatelessWidget {
     required this.icon,
     this.backgroundColor = Colors.transparent,
     this.iconColor = Colors.black,
-    this.size = 48.0,
+    this.size = 47.0,
     this.isSelected = false, // Provide a default value for isSelected
     Key? key,
   }) : super(key: key);
