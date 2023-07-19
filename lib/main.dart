@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/features/view/home_page.dart';
 import 'package:scholars_mobileapp/theme/app_theme.dart';
-import 'features/view/login_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: AppThemeLight.theme,
       debugShowCheckedModeBanner: false ,
-      home: const LogInPage(),
+      home: const HomePage(),
     );
   }
 }

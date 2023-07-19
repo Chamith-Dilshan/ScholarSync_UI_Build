@@ -15,7 +15,6 @@ class LogInPage extends StatefulWidget {
 class _LogInPageState extends State<LogInPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  final notificationController = TextEditingController();
   bool isChecked= false;
 
   @override
