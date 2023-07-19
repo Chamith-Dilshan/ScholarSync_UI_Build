@@ -25,9 +25,14 @@ class _TestState extends State<Test> {
           thirdLineStyle: const TextStyle(fontSize: 14, color: Colors.green),
           secondPartFirstLineStyle: const TextStyle(fontWeight: FontWeight.bold),
           controller: TextEditingController(),
-          ontap: () {
-          // Your onTap function
-
+          ontapBox: () {
+            // onTap function for the Box
+          },
+          ontapFrontIcon: (){
+            //onTap funtion for FrontIcon
+          },
+          ontapBackIcon: () {
+            //ontap funtion for backIcon
           },
           frontIcon: IconConstants.bellFilledIcon,
           backIcon: IconConstants.moonIcon,

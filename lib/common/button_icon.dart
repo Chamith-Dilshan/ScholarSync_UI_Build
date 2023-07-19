@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ButtonIcon extends StatelessWidget {
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final String? icon;
   final Color backgroundColor;
   final Color? iconColor;
@@ -11,7 +11,7 @@ class ButtonIcon extends StatelessWidget {
   
 
   const ButtonIcon({
-    required this.onTap,
+    this.onTap,
     this.icon,
     this.backgroundColor = Colors.transparent,
     this.iconColor,

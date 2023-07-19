@@ -12,7 +12,9 @@ class CustomTextField extends StatelessWidget {
   final TextStyle? secondPartFirstLineStyle;
 
   final TextEditingController controller;
-  final VoidCallback? ontap;
+  final VoidCallback? ontapBox;
+  final VoidCallback? ontapFrontIcon;
+  final VoidCallback? ontapBackIcon;
   final String? frontIcon;
   final String? backIcon;
   final double? frontIconScale;
@@ -36,7 +38,9 @@ class CustomTextField extends StatelessWidget {
     this.thirdLineStyle,
     this.secondPartFirstLineStyle,
     required this.controller,
-    this.ontap,
+    this.ontapBox,
+    this.ontapFrontIcon,
+    this.ontapBackIcon,
     this.frontIcon,
     this.backIcon,
     this.frontIconScale,
@@ -54,7 +58,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ontap,
+      onTap: ontapBox,
       child: Container(
         width: boxwidth,
         height: boxheight,
@@ -67,7 +71,7 @@ class CustomTextField extends StatelessWidget {
           children: [ 
             if (frontIcon != null)
               ButtonIcon(
-              onTap: () {},
+              onTap: ontapFrontIcon,
               icon: frontIcon,
               iconColor: frontIconColor,
               size: frontIconScale,
@@ -104,7 +108,7 @@ class CustomTextField extends StatelessWidget {
             ),
             if (backIcon != null)
               ButtonIcon(
-              onTap: () {},
+              onTap: ontapBackIcon,
               icon: backIcon,
               iconColor: backIconColor,
               size: backIconScale,
