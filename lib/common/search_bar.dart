@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../constants/icon_constants.dart';
 
 class MySearchBar extends StatelessWidget {
   final String hintText;
@@ -31,10 +34,20 @@ class MySearchBar extends StatelessWidget {
           decoration: InputDecoration(
             hintText: hintText,
             border: InputBorder.none,
-            prefixIcon: const Icon(Icons.search),
+            prefixIcon: SvgPicture.asset(IconConstants.searchIcon),
           ),
         ),
       ),
     );
   }
 }
+
+/*If you use this search bar you can write below code in the relevant file
+
+MySearchBar(
+              hintText: 'Search',
+              onChanged: (query) {
+                // Handle search query change
+              },
+            ),
+*/
