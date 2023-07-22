@@ -7,32 +7,48 @@ class UIConstants {
     VoidCallback? onFrontIconButtonpressed,
     String? frontIcon,
     String? frontIconToolTip,
+    required String title,
+    required double fontSize,
+    required FontWeight fontWeight,
     required bool titelCenter,
     required String backIcon,
     required VoidCallback onBackIconButtonpressed,
     }){
 
     return AppBar(
-      title: const Text('Hello'),
-      titleTextStyle: const TextStyle(
-        color: Palette.darkBackgroundColor,
-        fontSize: 22,
+      title: Text(title),
+      titleTextStyle: TextStyle(
+        color: PaletteLightMode.titleColor,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
       ),
       centerTitle: titelCenter,
       leading: frontIcon != null
           ? IconButton(
-              icon: SvgPicture.asset(frontIcon),
-              color: Palette.darkBackgroundColor,
-              iconSize: 30,
+              icon: SvgPicture.asset(
+                frontIcon,
+                colorFilter:const ColorFilter.mode(
+                  PaletteLightMode.secondaryGreenColor, 
+                  BlendMode.srcIn,
+                ),
+                width:40,
+                height:40,
+                ),
               tooltip: frontIconToolTip,
               onPressed: onFrontIconButtonpressed,
             )
           : null,
       actions: <Widget>[
           IconButton(
-            icon: SvgPicture.asset(backIcon),
-            color: Palette.darkBackgroundColor,
-            iconSize: 30,
+            icon: SvgPicture.asset(
+              backIcon,
+              colorFilter:const ColorFilter.mode(
+                PaletteLightMode.secondaryGreenColor, 
+                BlendMode.srcIn,
+              ),
+              width:40,
+              height:40,
+            ),
             tooltip: 'Menu',
             onPressed:onBackIconButtonpressed,
           ),

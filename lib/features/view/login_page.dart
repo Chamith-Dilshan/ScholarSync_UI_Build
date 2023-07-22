@@ -50,7 +50,7 @@ class _LogInPageState extends State<LogInPage> {
               width: 350,
               height: 400,
               decoration: const BoxDecoration(
-                color: Palette.lightBackgroundColor,
+                color: PaletteLightMode.backgroundColor,
               ),
               child: Column(
                 children: [
@@ -81,7 +81,7 @@ class _LogInPageState extends State<LogInPage> {
                       obscureText: _obscureText,
                       decoration: InputDecoration(
                         focusedBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(color: Palette.lightGreenColor)
+                        borderSide: BorderSide(color: PaletteLightMode.secondaryGreenColor)
                         ) ,
                         contentPadding:const EdgeInsets.all(22),
                         hintText: 'Password',
@@ -112,7 +112,7 @@ class _LogInPageState extends State<LogInPage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Checkbox(value: isChecked,
-                        activeColor: Palette.lightGreenColor,
+                        activeColor: PaletteLightMode.secondaryGreenColor,
                         tristate: false, 
                         onChanged:(bool? value){
                           setState(() {
@@ -126,7 +126,7 @@ class _LogInPageState extends State<LogInPage> {
                             text: "Remember me",
                             style: TextStyle(
                               fontSize: 12,
-                              color: Palette.textColor,
+                              color: PaletteLightMode.textColor,
                             ),
                           ),
                         ),
@@ -142,8 +142,8 @@ class _LogInPageState extends State<LogInPage> {
                         //button onTap Funtion
                       },
                       lable: 'Login',
-                      backgroundColor: Palette.lightGreenColor,
-                      textColor: Palette.lightBackgroundColor,
+                      backgroundColor: PaletteLightMode.secondaryGreenColor,
+                      textColor: PaletteLightMode.secondaryGreenColor,
                       fontsize: 14,
                     ),
                   ),

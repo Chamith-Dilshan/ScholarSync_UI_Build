@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import '../theme/palette.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
@@ -18,16 +19,16 @@ class MyBottomNavigationBar extends StatelessWidget {
       height: 60, 
       child: BottomAppBar(
         // Background color of the BottomNavigationBar
-        color: Palette.darkGreenColor, 
+        color: PaletteLightMode.primaryGreenColor, 
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             //Have to add the icons of the bottom naviation bar and place them here according to the path
-            buildBottomNavItem(Icons.home, 'Home', 0),
+            buildBottomNavItem(IconConstants.homeIcon as IconData, 'Home', 0),
             buildBottomNavItem(Icons.calendar_today, 'Calendar', 1),
             buildAddBottomNavItem(),
-            buildBottomNavItem(Icons.notifications, 'Notification', 3),
-            buildBottomNavItem(Icons.person, 'Profile', 4),
+            buildBottomNavItem(IconConstants.notifOutlinedIcon as IconData, 'Notification', 3),
+            buildBottomNavItem(IconConstants.peopleIcon as IconData, 'Profile', 4),
           ],
         ),
       ),
@@ -44,14 +45,14 @@ class MyBottomNavigationBar extends StatelessWidget {
         children: [
           Icon(
             iconData,
-            color: selected ? Palette.lightGreenColor : Palette.lightBackgroundColor,
+            color: selected ? PaletteLightMode.secondaryGreenColor : PaletteLightMode.backgroundColor,
           ),
           // Exclude Add icon from having the underline
           if (selected && index != 2) 
             Container(
               width: 40,
               height: 2,
-              color: Palette.lightBackgroundColor,
+              color: PaletteLightMode.backgroundColor,
               // Add margin for spacing
               margin: const EdgeInsets.symmetric(vertical: 4), 
             ),
@@ -79,12 +80,12 @@ class MyBottomNavigationBar extends StatelessWidget {
               height: 40,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Palette.lightBackgroundColor,
+                color: PaletteLightMode.backgroundColor,
               ),
             ),
             Icon(
-              Icons.add,
-              color: selected ? Palette.darkGreenColor : Palette.darkGreenColor,
+              IconConstants.addButtonIcon as IconData,
+              color: selected ? PaletteLightMode.primaryGreenColor : PaletteLightMode.primaryGreenColor,
             ),
           ],
         ),

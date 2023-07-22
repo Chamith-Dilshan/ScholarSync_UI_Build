@@ -15,6 +15,9 @@ const SettingsPage({Key? key}) : super(key: key);
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIConstants.appBar(
+        title: 'Settings',
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
         titelCenter: true,
         backIcon: IconConstants.hamburgerMenuIcon,
         frontIcon: IconConstants.leftArrowIcon,
@@ -32,7 +35,7 @@ const SettingsPage({Key? key}) : super(key: key);
           );
         },
       ),
-       backgroundColor: Palette.lightBackgroundColor,
+       backgroundColor: PaletteLightMode.backgroundColor,
       //body
 body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -44,7 +47,7 @@ body: Padding(
               style: TextStyle(
                 fontSize: 13,
                 fontFamily: "inter",
-                color: Palette.darkBackgroundColor,
+                color: PaletteLightMode.titleColor,
               ),
             ),
             const SizedBox(height: 10),
@@ -54,7 +57,7 @@ body: Padding(
                 firstLine: "First Line Text",
                 firstLineStyle: const TextStyle(
                   fontSize: 12,
-                  color: Palette.darkBackgroundColor,
+                  color: PaletteLightMode.titleColor,
                 ),
                 controller: TextEditingController(),
                 ontapBox: () {
@@ -72,9 +75,10 @@ body: Padding(
                 backIconScale: 50,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
-                backgroundColor: Colors.white,
+                backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
                 boxheight: 65,
+                borderRadius:10,
                 padding: 16,
               ),
             ),
@@ -87,7 +91,7 @@ body: Padding(
               style: TextStyle(
                 fontSize: 13,
                 fontFamily: "inter",
-                color: Palette.darkBackgroundColor,
+                color: PaletteLightMode.titleColor,
               ),
             ),
 //settings widget 02
@@ -96,7 +100,7 @@ body: Padding(
                 firstLine: "First Line Text",
                 firstLineStyle: const TextStyle(
                   fontSize: 12,
-                  color: Palette.darkBackgroundColor,
+                  color: PaletteLightMode.titleColor,
                 ),
                 controller: TextEditingController(),
                 ontapBox: () {
@@ -114,9 +118,10 @@ body: Padding(
                 backIconScale: 50,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
-                backgroundColor: Colors.white,
+                backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
                 boxheight: 65,
+                borderRadius:10,
                 padding: 16,
               ),
             ),
@@ -127,7 +132,7 @@ body: Padding(
                 firstLine: "First Line Text",
                 firstLineStyle: const TextStyle(
                   fontSize: 12,
-                  color: Palette.darkBackgroundColor,
+                  color: PaletteLightMode.titleColor,
                 ),
                 controller: TextEditingController(),
                 ontapBox: () {
@@ -148,6 +153,7 @@ body: Padding(
                 backgroundColor: Colors.white,
                 boxwidth: 369.84,
                 boxheight: 65,
+                borderRadius:10,
                 padding: 16,
               ),
             ),

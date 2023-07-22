@@ -10,6 +10,9 @@ class MyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIConstants.appBar(
+        title: 'Hello',
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
         titelCenter: true,
         frontIcon: IconConstants.leftArrowIcon,
         backIcon: IconConstants.hamburgerMenuIcon,

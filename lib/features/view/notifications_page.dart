@@ -17,6 +17,9 @@ const NotificationsPage({Key? key}) : super(key: key);
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIConstants.appBar(
+        title: 'Notifications',
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
         titelCenter: false,
         backIcon: IconConstants.hamburgerMenuIcon,
         onBackIconButtonpressed: () {
@@ -27,7 +30,7 @@ const NotificationsPage({Key? key}) : super(key: key);
         },
       ),
       
-      backgroundColor: Palette.lightBackgroundColor,
+      backgroundColor: PaletteLightMode.backgroundColor,
 
    //body
    body: Padding(
@@ -40,7 +43,7 @@ const NotificationsPage({Key? key}) : super(key: key);
               style: TextStyle(
                 fontSize: 12,
                 fontFamily: "inter",
-                color: Palette.textColor,
+                color: PaletteLightMode.textColor,
               ),
             ),
             const SizedBox(height: 10),
@@ -50,8 +53,8 @@ const NotificationsPage({Key? key}) : super(key: key);
                 firstLine: "Lecture hall allocation",
                 secondPartFirstline: "has been updated",
                 thirdLine: "20 minutes ago",
-                firstLineStyle: const TextStyle(fontSize: 12, color: Palette.textColor),
-                thirdLineStyle: const TextStyle(fontSize: 9, color: Palette.lightTextcolor),
+                firstLineStyle: const TextStyle(fontSize: 12, color: PaletteLightMode.textColor),
+                thirdLineStyle: const TextStyle(fontSize: 9, color: PaletteLightMode.secondaryTextColor),
                 secondPartFirstLineStyle: const TextStyle(fontWeight: FontWeight.bold),
                 controller: TextEditingController(),
                 ontapBox: () {
@@ -69,9 +72,10 @@ const NotificationsPage({Key? key}) : super(key: key);
                 backIconScale: 50,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
-                backgroundColor: Colors.white,
+                backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
                 boxheight: 65,
+                borderRadius:10,
                 padding: 16,
               ),
             ),
@@ -82,7 +86,7 @@ const NotificationsPage({Key? key}) : super(key: key);
               style: TextStyle(
                 fontSize: 12,
                 fontFamily: "inter",
-                color: Palette.textColor,
+                color: PaletteLightMode.textColor,
               ),
             ), 
           Center(
@@ -90,8 +94,8 @@ const NotificationsPage({Key? key}) : super(key: key);
                 firstLine: "There are upcoming",
                 secondPartFirstline: "lectures",
                 thirdLine: "30 minutes ago",
-                firstLineStyle: const TextStyle(fontSize: 12, color: Palette.textColor),
-                thirdLineStyle: const TextStyle(fontSize: 9, color: Palette.lightTextcolor),
+                firstLineStyle: const TextStyle(fontSize: 12, color: PaletteLightMode.textColor),
+                thirdLineStyle: const TextStyle(fontSize: 9, color: PaletteLightMode.secondaryTextColor),
                 secondPartFirstLineStyle: const TextStyle(fontWeight: FontWeight.bold),
                 controller: TextEditingController(),
                 ontapBox: () {
@@ -107,11 +111,12 @@ const NotificationsPage({Key? key}) : super(key: key);
                 backIcon: IconConstants.moonIcon,
                 frontIconScale: 50,
                 backIconScale: 50,
-                borderColor: Colors.transparent,
+                borderColor: PaletteLightMode.transparentColor,
                 borderWidth: 0,
-                backgroundColor: Colors.white,
+                backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
                 boxheight: 65,
+                borderRadius:10,
                 padding: 16,
               ),
             ),
@@ -123,7 +128,7 @@ const NotificationsPage({Key? key}) : super(key: key);
               style: TextStyle(
                 fontSize: 12,
                 fontFamily: "inter",
-                color: Palette.textColor,
+                color: PaletteLightMode.textColor,
               ),
             ),
 
