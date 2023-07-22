@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
+//import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
 
 class MyProfilePage extends StatefulWidget {
   const MyProfilePage({super.key});
@@ -19,8 +19,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyAppBar(
+    return const Scaffold(
+        /*appBar: MyAppBar(
         title: 'My Profile',
         onMenuPressed: () {
           // Handle menu icon press
@@ -79,7 +79,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
       bottomNavigationBar: MyBottomNavigationBar(
         currentIndex: _currentIndex,
         onTabTapped: _onTabTapped,
-      ),
-    );
+      ),*/
+        );
   }
 }
