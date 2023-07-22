@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
+import 'package:scholars_mobileapp/constants/ui_constants.dart';
+import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
 
 class MyProfilePage extends StatefulWidget {
   const MyProfilePage({super.key});
@@ -19,14 +21,18 @@ class _MyProfilePageState extends State<MyProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        /*appBar: MyAppBar(
+    return Scaffold(
+      appBar: UIConstants.appBar(
         title: 'My Profile',
-        onMenuPressed: () {
-          // Handle menu icon press
-        },
-        onBackPressed: () {
-          Navigator.pop(context); // Navigate back to the previous page
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        titelCenter: false,
+        backIcon: IconConstants.hamburgerMenuIcon,
+        onBackIconButtonpressed: () {
+          /* Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const LogInPage()),
+          );*/
         },
       ),
       body: Column(
@@ -79,7 +85,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
       bottomNavigationBar: MyBottomNavigationBar(
         currentIndex: _currentIndex,
         onTabTapped: _onTabTapped,
-      ),*/
-        );
+      ),
+    );
   }
 }
