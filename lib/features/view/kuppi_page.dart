@@ -36,18 +36,12 @@ class KuppiPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Call the CustomSearchBar here
             CustomSearchBar(
               hint: 'Search for kuppi sessions...',
-              onSearchSubmitted: (query) {
-                // Handle the search query here
-              },
+              onSearchSubmitted: (query) {},
             ),
-            const SizedBox(
-                height:
-                    20), // Add some spacing if needed between the search bar and other content
-            const Text(
-                'Other content goes here'), // Add other content as needed
+            const SizedBox(height: 20),
+            const Text('Other content goes here'),
           ],
         ),
       ),
