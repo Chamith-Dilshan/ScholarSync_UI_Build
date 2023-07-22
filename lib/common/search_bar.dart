@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../constants/icon_constants.dart';
+import '../theme/palette.dart';
 
 class MySearchBar extends StatelessWidget {
   final String hintText;
@@ -18,7 +19,7 @@ class MySearchBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: PaletteLightMode.backgroundColor,
           borderRadius: BorderRadius.circular(8.0),
           boxShadow: [
             BoxShadow(

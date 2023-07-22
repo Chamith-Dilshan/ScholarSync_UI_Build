@@ -22,4 +22,11 @@ class IconConstants{
   static const String eyeCloseIcon = '$_svgPath/eye_close.svg';
   static const String leftArrowIcon = '$_svgPath/left_arrow.svg';
   static const String lockIcon = '$_svgPath/lock.svg';
+  static const String calendarIcon = '$_svgPath/calendar.svg';
+  static const String homeIcon = '$_svgPath/home.svg';
+  static const String toggleOnIcon = '$_svgPath/toggle_on.svg';
+  static const String toggleOffIcon = '$_svgPath/toggle_off.svg';
+  static const String darkNightModeIcon = '$_svgPath/night_mode.svg';
+  static const String graduationHatIcon = '$_svgPath/hat_graduation.svg';
+  static const String addButtonIcon = '$_svgPath/add_button.svg';
 }

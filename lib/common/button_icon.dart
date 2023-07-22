@@ -35,7 +35,10 @@ class ButtonIcon extends StatelessWidget {
           icon!,
           width: size,
           height: size,
-          color : iconColor,
+          colorFilter: ColorFilter.mode(
+            iconColor ?? Colors.black, 
+            BlendMode.srcIn,
+          ),
       ): const SizedBox.shrink(),
     ),
     );

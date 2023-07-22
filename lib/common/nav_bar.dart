@@ -24,14 +24,14 @@ class _NavBarState extends State<NavBar> {
       width: 410,
       height: 70,
       decoration: const BoxDecoration(
-        color: Palette.darkGreenColor,
+        color: PaletteLightMode.secondaryGreenColor,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           ButtonIcon(
             icon: IconConstants.googleDriveIcon,
-            iconColor: _selectedIndex == 0 ? Palette.lightBackgroundColor : Palette.lightGreenColor,
+            iconColor: _selectedIndex == 0 ? PaletteLightMode.backgroundColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
               setState(() {
@@ -43,7 +43,7 @@ class _NavBarState extends State<NavBar> {
           ),
           ButtonIcon(
             icon: IconConstants.leftArrowIcon,
-            iconColor: _selectedIndex == 1 ? Palette.lightBackgroundColor : Palette.lightGreenColor,
+            iconColor: _selectedIndex == 1 ? PaletteLightMode.secondaryGreenColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
               setState(() {
@@ -55,7 +55,7 @@ class _NavBarState extends State<NavBar> {
           ),
           ButtonIcon(
             icon: IconConstants.leftArrowIcon,
-            iconColor: _selectedIndex == 2 ? Palette.lightBackgroundColor : Palette.lightGreenColor,
+            iconColor: _selectedIndex == 2 ? PaletteLightMode.backgroundColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
               setState(() {
@@ -67,7 +67,7 @@ class _NavBarState extends State<NavBar> {
           ),
           ButtonIcon(
             icon: IconConstants.bellFilledIcon,
-            iconColor: _selectedIndex == 3 ? Palette.lightBackgroundColor : Palette.lightGreenColor,
+            iconColor: _selectedIndex == 3 ? PaletteLightMode.backgroundColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
               setState(() {
@@ -79,7 +79,7 @@ class _NavBarState extends State<NavBar> {
           ),
           ButtonIcon(
             icon: IconConstants.peopleIcon,
-            iconColor: _selectedIndex == 4 ? Palette.lightBackgroundColor : Palette.lightGreenColor,
+            iconColor: _selectedIndex == 4 ? PaletteLightMode.backgroundColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
               setState(() {

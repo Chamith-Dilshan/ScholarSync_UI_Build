@@ -18,7 +18,7 @@ class MyBottomNavigationBar extends StatelessWidget {
       height: 60, 
       child: BottomAppBar(
         // Background color of the BottomNavigationBar
-        color: Palette.darkGreenColor, 
+        color: PaletteLightMode.primaryGreenColor, 
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -44,14 +44,14 @@ class MyBottomNavigationBar extends StatelessWidget {
         children: [
           Icon(
             iconData,
-            color: selected ? Palette.lightGreenColor : Palette.lightBackgroundColor,
+            color: selected ? PaletteLightMode.secondaryGreenColor : PaletteLightMode.backgroundColor,
           ),
           // Exclude Add icon from having the underline
           if (selected && index != 2) 
             Container(
               width: 40,
               height: 2,
-              color: Palette.lightBackgroundColor,
+              color: PaletteLightMode.backgroundColor,
               // Add margin for spacing
               margin: const EdgeInsets.symmetric(vertical: 4), 
             ),
@@ -79,12 +79,12 @@ class MyBottomNavigationBar extends StatelessWidget {
               height: 40,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Palette.lightBackgroundColor,
+                color: PaletteLightMode.backgroundColor,
               ),
             ),
             Icon(
               Icons.add,
-              color: selected ? Palette.darkGreenColor : Palette.darkGreenColor,
+              color: selected ? PaletteLightMode.primaryGreenColor : PaletteLightMode.primaryGreenColor,
             ),
           ],
         ),

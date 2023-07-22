@@ -26,6 +26,7 @@ class CustomTextField extends StatelessWidget {
   final Color? backgroundColor;
   final double boxwidth;
   final double boxheight;
+  final double borderRadius;
   final double padding;
 
   const CustomTextField({super.key,
@@ -52,6 +53,7 @@ class CustomTextField extends StatelessWidget {
     this.backgroundColor,
     required this.boxwidth,
     required this.boxheight,
+    required this.borderRadius,
     required this.padding,
   });
 
@@ -64,6 +66,7 @@ class CustomTextField extends StatelessWidget {
         height: boxheight,
         padding: EdgeInsets.all(padding),
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(borderRadius),
           color: backgroundColor,
           border: Border.all(color: borderColor, width: borderWidth),
         ),
