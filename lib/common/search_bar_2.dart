@@ -10,8 +10,8 @@ class CustomSearchBar extends StatefulWidget {
   const CustomSearchBar({
     Key? key,
     required this.hint,
-    this.textColor = Palette.secondaryTextColor,
-    this.iconColor = Palette.secondaryTextColor,
+    this.textColor = PaletteLightMode.secondaryTextColor,
+    this.iconColor = PaletteLightMode.secondaryTextColor,
     this.onSearchSubmitted,
   }) : super(key: key);
 
@@ -41,8 +41,9 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
 
   void _onFocusChange() {
     setState(() {
-      _currentIconColor =
-          _focusNode.hasFocus ? Palette.lightGreenColor : widget.iconColor;
+      _currentIconColor = _focusNode.hasFocus
+          ? PaletteLightMode.secondaryGreenColor
+          : widget.iconColor;
     });
   }
 
@@ -70,13 +71,13 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
         child: TextField(
           onSubmitted: widget.onSearchSubmitted,
           style: TextStyle(color: widget.textColor),
-          cursorColor: Palette.lightGreenColor,
+          cursorColor: PaletteLightMode.secondaryGreenColor,
           focusNode: _focusNode,
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.white,
             hintText: widget.hint,
-            hintStyle: const TextStyle(color: Palette.secondaryTextColor),
+            hintStyle: TextStyle(color: widget.textColor),
             prefixIcon: Padding(
               padding: const EdgeInsets.only(left: 20, right: 27),
               child: Icon(Icons.search, color: _currentIconColor),
@@ -86,8 +87,8 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
               borderRadius: BorderRadius.circular(12),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide:
-                  const BorderSide(color: Palette.lightGreenColor, width: 1.0),
+              borderSide: const BorderSide(
+                  color: PaletteLightMode.secondaryGreenColor, width: 1.0),
               borderRadius: BorderRadius.circular(12),
             ),
           ),
