@@ -13,7 +13,7 @@ class MyPage extends StatelessWidget {
         title: 'Hello',
         fontSize: 22,
         fontWeight: FontWeight.bold,
-        titelCenter: true,
+        titleCenter: true,
         frontIcon: IconConstants.leftArrowIcon,
         backIcon: IconConstants.hamburgerMenuIcon,
         frontIconToolTip: 'go to the next page',

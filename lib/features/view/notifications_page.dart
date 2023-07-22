@@ -20,7 +20,7 @@ const NotificationsPage({Key? key}) : super(key: key);
         title: 'Notifications',
         fontSize: 22,
         fontWeight: FontWeight.bold,
-        titelCenter: false,
+        titleCenter: false,
         backIcon: IconConstants.hamburgerMenuIcon,
         onBackIconButtonpressed: () {
           Navigator.push(

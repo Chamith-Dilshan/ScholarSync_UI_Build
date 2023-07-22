@@ -10,7 +10,7 @@ class UIConstants {
     required String title,
     required double fontSize,
     required FontWeight fontWeight,
-    required bool titelCenter,
+    required bool titleCenter,
     required String backIcon,
     required VoidCallback onBackIconButtonpressed,
     }){
@@ -22,7 +22,7 @@ class UIConstants {
         fontSize: fontSize,
         fontWeight: fontWeight,
       ),
-      centerTitle: titelCenter,
+      centerTitle: titleCenter,
       leading: frontIcon != null
           ? IconButton(
               icon: SvgPicture.asset(

@@ -18,7 +18,7 @@ const SettingsPage({Key? key}) : super(key: key);
         title: 'Settings',
         fontSize: 22,
         fontWeight: FontWeight.bold,
-        titelCenter: true,
+        titleCenter: true,
         backIcon: IconConstants.hamburgerMenuIcon,
         frontIcon: IconConstants.leftArrowIcon,
         frontIconToolTip: 'go to the next page',

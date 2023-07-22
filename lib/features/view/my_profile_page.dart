@@ -26,7 +26,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
         title: 'My Profile',
         fontSize: 22,
         fontWeight: FontWeight.bold,
-        titelCenter: false,
+        titleCenter: false,
         backIcon: IconConstants.hamburgerMenuIcon,
         onBackIconButtonpressed: () {
           /* Navigator.push(
@@ -38,7 +38,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ProfileInfo(),
+          //const ProfileInfo(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
             child: Row(
@@ -73,10 +73,10 @@ class _MyProfilePageState extends State<MyProfilePage> {
               crossAxisSpacing: 25.0,
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
               children: const [
-                ProjectBox(),
-                ProjectBox(),
-                ProjectBox(),
-                ProjectBox(),
+                // ProjectBox(),
+                // ProjectBox(),
+                // ProjectBox(),
+                // ProjectBox(),
               ],
             ),
           ),
