@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../theme/palette.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
+
 
 class MyBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
@@ -23,11 +25,11 @@ class MyBottomNavigationBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             //Have to add the icons of the bottom naviation bar and place them here according to the path
-            buildBottomNavItem(Icons.home, 'Home', 0),
+            buildBottomNavItem(IconConstants.homeIcon as IconData, 'Home', 0),
             buildBottomNavItem(Icons.calendar_today, 'Calendar', 1),
             buildAddBottomNavItem(),
-            buildBottomNavItem(Icons.notifications, 'Notification', 3),
-            buildBottomNavItem(Icons.person, 'Profile', 4),
+            buildBottomNavItem(IconConstants.notifOutlinedIcon as IconData, 'Notification', 3),
+            buildBottomNavItem(IconConstants.peopleIcon as IconData, 'Profile', 4),
           ],
         ),
       ),
@@ -83,7 +85,7 @@ class MyBottomNavigationBar extends StatelessWidget {
               ),
             ),
             Icon(
-              Icons.add,
+              IconConstants.addButtonIcon as IconData,
               color: selected ? Palette.darkGreenColor : Palette.darkGreenColor,
             ),
           ],
