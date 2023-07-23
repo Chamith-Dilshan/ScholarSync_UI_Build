@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:scholars_mobileapp/features/view/kuppi_page.dart';
 import 'package:scholars_mobileapp/features/view/my_profile_page.dart';
 import 'package:scholars_mobileapp/features/view/notifications_page.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
 
 class BottomNavBar extends StatefulWidget {
   final int initialIndex;
@@ -39,33 +41,40 @@ class _BottomNavBarState extends State<BottomNavBar> {
         color: PaletteLightMode.primaryGreenColor,
         boxShadow: [
           BoxShadow(
-            color: Color.fromRGBO(11, 24, 43, 0.08),
+            color: PaletteLightMode.shadowColor,
             offset: Offset(8, 8),
             blurRadius: 24,
             spreadRadius: 0,
           ),
         ],
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _buildNavItem(0, Icons.home, const KuppiPage(), 'Home'),
-          _buildNavItem(1, Icons.calendar_today, const KuppiPage(), 'Calendar'),
-          _buildAddNavItem(),
-          _buildNavItem(3, Icons.notifications, const NotificationsPage(),
-              'Notifications'),
-          _buildNavItem(4, Icons.person, const MyProfilePage(), 'My Profile'),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            _buildNavItem(0, IconConstants.homeIcon, const KuppiPage(), 'Home'),
+            _buildNavItem(
+                1, IconConstants.calendarIcon, const KuppiPage(), 'Calendar'),
+            _buildAddNavItem(),
+            _buildNavItem(3, IconConstants.bellFilledIcon,
+                const NotificationsPage(), 'Notifications'),
+            _buildNavItem(4, IconConstants.personIcon, const MyProfilePage(),
+                'My Profile'),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildNavItem(int index, IconData icon, Widget page, String label) {
+  Widget _buildNavItem(int index, String iconName, Widget page, String label) {
     final isSelected = _selectedIndex == index;
-    final iconColor =
-        isSelected ? Colors.white : PaletteLightMode.secondaryGreenColor;
-    final lineColor =
-        isSelected ? PaletteLightMode.secondaryGreenColor : Colors.transparent;
+    final iconColor = isSelected
+        ? PaletteLightMode.whiteColor
+        : PaletteLightMode.secondaryGreenColor;
+    final lineColor = isSelected
+        ? PaletteLightMode.secondaryGreenColor
+        : PaletteLightMode.transparentColor;
 
     return Expanded(
       child: InkWell(
@@ -79,14 +88,25 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: iconColor, size: 28),
+            SvgPicture.asset(
+              iconName,
+              colorFilter: ColorFilter.mode(
+                iconColor,
+                BlendMode.srcIn,
+              ),
+              width: 24,
+              height: 24,
+            ),
             const SizedBox(height: 4),
-            Container(
-              width: 32,
-              height: 4,
-              decoration: BoxDecoration(
-                color: lineColor,
-                borderRadius: BorderRadius.circular(2),
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Container(
+                width: 32,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: lineColor,
+                  borderRadius: BorderRadius.circular(2),
+                ),
               ),
             ),
           ],
@@ -97,11 +117,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   Widget _buildAddNavItem() {
     final isSelected = _selectedIndex == 2;
-    final circleColor =
-        isSelected ? PaletteLightMode.secondaryGreenColor : Colors.white;
-    final iconColor =
-        isSelected ? Colors.white : PaletteLightMode.primaryGreenColor;
-    final lineColor = isSelected ? Colors.transparent : Colors.transparent;
+    final circleColor = isSelected
+        ? PaletteLightMode.secondaryGreenColor
+        : PaletteLightMode.whiteColor;
+    final iconColor = isSelected
+        ? PaletteLightMode.whiteColor
+        : PaletteLightMode.primaryGreenColor;
+    final lineColor = isSelected
+        ? PaletteLightMode.transparentColor
+        : PaletteLightMode.transparentColor;
 
     return Expanded(
       child: InkWell(
@@ -122,7 +146,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 shape: BoxShape.circle,
                 color: circleColor,
               ),
-              child: Icon(Icons.add, color: iconColor, size: 45),
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: SvgPicture.asset(
+                  IconConstants.addButtonIcon,
+                  colorFilter: ColorFilter.mode(
+                    iconColor,
+                    BlendMode.srcIn,
+                  ),
+                  width: 10,
+                  height: 10,
+                ),
+              ),
             ),
             const SizedBox(height: 4),
             Container(
