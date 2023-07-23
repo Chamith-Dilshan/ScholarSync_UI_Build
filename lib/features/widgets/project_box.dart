@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
 class ProjectBox extends StatelessWidget {
@@ -37,7 +38,8 @@ class ProjectBox extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Icon(Icons.folder),
+              //have to add a icon into icon folder
+              const Icon(Icons.folder),//const Icon(IconConstants.folder_icon)
               Text('Project $projectNumber'),
               const Icon(Icons.more_horiz),
             ],
@@ -116,7 +118,7 @@ class AddProjectBox extends StatelessWidget {
         ],
       ),
       child: IconButton(
-        icon: const Icon(Icons.add),
+        icon: const Text(IconConstants.addButtonIcon),
         onPressed: () {
           // Handle button press
         },

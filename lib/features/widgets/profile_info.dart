@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
 class ProfileInfo extends StatelessWidget {
@@ -35,7 +36,7 @@ class ProfileInfo extends StatelessWidget {
                       height: 32, // Set the desired height for the container
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: PaletteLightMode.textColor, // Choose the background color you want for the camera icon
+                        color: PaletteLightMode.secondaryGreenColor, // Choose the background color you want for the camera icon
                       ),
                       child: IconButton(
                         onPressed: () {
@@ -43,8 +44,10 @@ class ProfileInfo extends StatelessWidget {
                         },
                         iconSize: 18, // Set the desired icon size
                         icon: const Icon(
+                          //have to add a camera icon
+                          //IconConstants.camer_icon
                           Icons.camera_alt,
-                          color: Colors.black,
+                          color: PaletteLightMode.backgroundColor, 
                         ),
                       ),
                     ),
