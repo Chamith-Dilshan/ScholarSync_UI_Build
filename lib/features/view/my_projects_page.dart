@@ -31,24 +31,25 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: UIConstants.appBar(
-          title: 'My Projects',
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          titleCenter: false,
-          backIcon: IconConstants.hamburgerMenuIcon,
-          onFrontIconButtonpressed: () {
-            /* Navigator.push(
+        title: 'My Projects',
+        fontSize: 22,
+        fontWeight: FontWeight.w600,
+        titleCenter: true,
+        frontIcon: IconConstants.leftArrowIcon,
+        backIcon: IconConstants.hamburgerMenuIcon,
+        onFrontIconButtonpressed: () {
+          /* Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const LogInPage()),
           );*/
-          },
-          onBackIconButtonpressed: () {
-            /* Navigator.push(
+        },
+        onBackIconButtonpressed: () {
+          /* Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const LogInPage()),
           );*/
-          },
-        ),
+        },
+      ),
         body: Column(
           children: [
             CustomSearchBar(

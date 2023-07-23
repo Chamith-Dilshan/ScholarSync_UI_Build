@@ -13,13 +13,13 @@ class MyProfilePage extends StatefulWidget {
 }
 
 class _MyProfilePageState extends State<MyProfilePage> {
-  int _currentIndex = 0;
+ /* int _currentIndex = 0;
 
   void _onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +27,15 @@ class _MyProfilePageState extends State<MyProfilePage> {
       appBar: UIConstants.appBar(
         title: 'My Profile',
         fontSize: 22,
-        fontWeight: FontWeight.bold,
-        titleCenter: false,
+        fontWeight: FontWeight.w600,
+        titleCenter: true,
         backIcon: IconConstants.hamburgerMenuIcon,
+        onFrontIconButtonpressed: () {
+          /* Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const LogInPage()),
+          );*/
+        },
         onBackIconButtonpressed: () {
           /* Navigator.push(
             context,

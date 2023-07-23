@@ -14,13 +14,13 @@ class AcademicStaffPage extends StatefulWidget {
 class _AcademicStaffPageState extends State<AcademicStaffPage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  int _currentIndex = 0;
+  /*int _currentIndex = 0;
 
   void _onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
-  }
+  }*/
 
   @override
   void initState() {
