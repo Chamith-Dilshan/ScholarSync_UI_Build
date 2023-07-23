@@ -50,7 +50,7 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 18),
       decoration: BoxDecoration(
         boxShadow: const [
           BoxShadow(
@@ -63,9 +63,7 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Theme(
-        // Add Theme widget to override hoverColor
         data: Theme.of(context).copyWith(
-          // Set hoverColor to transparent to remove the transparency effect
           hoverColor: Colors.transparent,
         ),
         child: TextField(
