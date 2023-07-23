@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
 import 'package:scholars_mobileapp/common/search_bar_2.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
@@ -18,13 +17,13 @@ class MyProjectsPage extends StatefulWidget {
 }
 
 class _MyProjectsPageState extends State<MyProjectsPage> {
-  int _currentIndex = 0;
+ /* int _currentIndex = 0;
 
   void _onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -101,10 +100,10 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
             ),
           ],
         ),
-        bottomNavigationBar: MyBottomNavigationBar(
+       /* bottomNavigationBar: MyBottomNavigationBar(
           currentIndex: _currentIndex,
           onTabTapped: _onTabTapped,
-        ),
+        ),*/
       ),
     );
   }

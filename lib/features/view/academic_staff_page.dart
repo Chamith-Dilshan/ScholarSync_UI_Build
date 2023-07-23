@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/features/widgets/academic_staff_page_tab.dart';
@@ -139,10 +138,10 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
           ),
         ],
       ),
-      bottomNavigationBar: MyBottomNavigationBar(
+     /* bottomNavigationBar: MyBottomNavigationBar(
         currentIndex: _currentIndex,
         onTabTapped: _onTabTapped,
-      ),
+      ),*/
     );
   }
 }

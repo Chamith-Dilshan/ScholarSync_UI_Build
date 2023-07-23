@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
 import 'package:scholars_mobileapp/features/widgets/profile_info.dart';
 import 'package:scholars_mobileapp/features/widgets/project_box.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
@@ -111,10 +110,10 @@ class _MyProfilePageState extends State<MyProfilePage> {
         ],
       ),
 
-         bottomNavigationBar: MyBottomNavigationBar(
+    /*     bottomNavigationBar: MyBottomNavigationBar(
            currentIndex: _currentIndex,
            onTabTapped: _onTabTapped,
-        ),
+        ),*/
     );
   }
 }
