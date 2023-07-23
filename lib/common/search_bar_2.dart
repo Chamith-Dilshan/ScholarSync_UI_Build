@@ -64,7 +64,8 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
       ),
       child: Theme(
         data: Theme.of(context).copyWith(
-          hoverColor: Colors.transparent,
+          // Set hoverColor to transparent to remove the transparency effect
+          hoverColor: PaletteLightMode.transparentColor,
         ),
         child: TextField(
           onSubmitted: widget.onSearchSubmitted,

@@ -1,4 +1,4 @@
-class IconConstants{
+class IconConstants {
   static const String _svgPath = 'assets/icons';
   static const String bellFilledIcon = '$_svgPath/bell_filled.svg';
   static const String bellOutlinedIcon = '$_svgPath/bell_outlined.svg';
@@ -14,7 +14,7 @@ class IconConstants{
   static const String peopleIcon = '$_svgPath/people.svg';
   static const String searchIcon = '$_svgPath/search.svg';
   static const String settingFilledIcon = '$_svgPath/setting_filled.svg';
-  static const String settingOutlinedIcon= '$_svgPath/setting_outlined.svg';
+  static const String settingOutlinedIcon = '$_svgPath/setting_outlined.svg';
   static const String teacherIcon = '$_svgPath/teacher.svg';
   static const String userFilledIcon = '$_svgPath/user_filled.svg';
   static const String userOutlinedIcon = '$_svgPath/user_outlined.svg';
@@ -29,4 +29,5 @@ class IconConstants{
   static const String darkNightModeIcon = '$_svgPath/night_mode.svg';
   static const String graduationHatIcon = '$_svgPath/hat_graduation.svg';
   static const String addButtonIcon = '$_svgPath/add_button.svg';
+  static const String personIcon = '$_svgPath/person.svg';
 }
