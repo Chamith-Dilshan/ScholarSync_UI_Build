@@ -94,8 +94,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 iconColor,
                 BlendMode.srcIn,
               ),
-              width: 24,
-              height: 24,
+              width: 23,
+              height: 23,
             ),
             const SizedBox(height: 4),
             Padding(
