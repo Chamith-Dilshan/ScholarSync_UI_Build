@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scholars_mobileapp/common/search_bar_2.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
@@ -116,7 +117,7 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: PaletteLightMode.textColor.withOpacity(0.3),
+            color: PaletteLightMode.shadowColor.withOpacity(0.3),
             spreadRadius: 2,
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -137,11 +138,11 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
           ),
           // The add icon in the center of the circle
           IconButton(
-            icon: const Text(IconConstants.addButtonIcon),
+            icon: SvgPicture.asset(IconConstants.addButtonIcon),
             onPressed: () {
               // Handle button press
             },
-            color: PaletteLightMode.backgroundColor,
+            color: PaletteLightMode.whiteColor,
           ),
         ],
       ),
