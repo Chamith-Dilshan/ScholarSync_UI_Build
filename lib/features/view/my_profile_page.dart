@@ -4,6 +4,7 @@ import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
 import 'package:scholars_mobileapp/features/widgets/profile_info.dart';
 import 'package:scholars_mobileapp/features/widgets/project_box.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
 
 class MyProfilePage extends StatefulWidget {
   const MyProfilePage({super.key});
@@ -40,7 +41,10 @@ class _MyProfilePageState extends State<MyProfilePage> {
     body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-         const ProfileInfo(),
+         const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+            child: ProfileInfo(),
+          ),
           const SizedBox(height: 11),
           Padding(
             padding: const EdgeInsets.only(left: 25,right: 25),
@@ -61,7 +65,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                   child: const Text(
                     'View All',
                     style: TextStyle(
-                      color: Colors.green,
+                      color: PaletteLightMode.textColor,
                       fontSize: 16,
                     ),
                   ),
