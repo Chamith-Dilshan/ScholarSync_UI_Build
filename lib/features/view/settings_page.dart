@@ -5,7 +5,7 @@ import 'package:scholars_mobileapp/features/view/login_page.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 import 'package:scholars_mobileapp/common/custom_textfield.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/theme/app_theme.dart';
+// import 'package:scholars_mobileapp/theme/app_theme.dart';
 // import 'package:scholars_mobileapp/features/view/home_page.dart';
 
 
@@ -175,18 +175,3 @@ body: Padding(
   }
 }
 
-void main() {
-  runApp(const MainApp());
-}
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppThemeLight.theme,
-      debugShowCheckedModeBanner: false ,
-      home: const SettingsPage(),
-    );
-  }
-}
