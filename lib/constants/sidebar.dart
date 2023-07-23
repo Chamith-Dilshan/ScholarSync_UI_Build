@@ -1,4 +1,4 @@
-import 'dart:io';
+//import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -11,7 +11,7 @@ class Sidebaryy extends StatefulWidget {
 }
 
 class _SidebaryyState extends State<Sidebaryy> {
-  File _image = File('');
+ // File _image = File('');
 
   final ImagePicker _picker = ImagePicker();
   @override
@@ -110,7 +110,7 @@ class _SidebaryyState extends State<Sidebaryy> {
     final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       setState(() {
-        _image = File(pickedFile.path);
+       // _image = File(pickedFile.path);
       });
     }
   }
