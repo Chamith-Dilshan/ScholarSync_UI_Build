@@ -5,7 +5,7 @@ import 'package:scholars_mobileapp/features/view/login_page.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 import 'package:scholars_mobileapp/common/custom_textfield.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
-// import 'package:scholars_mobileapp/theme/app_theme.dart';
+import 'package:scholars_mobileapp/theme/app_theme.dart';
 // import 'package:scholars_mobileapp/features/view/home_page.dart';
 
 
@@ -45,7 +45,7 @@ body: Padding(
             const Text(
               'General',
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 14,
                 fontFamily: "inter",
                 color: PaletteLightMode.titleColor,
               ),
@@ -54,9 +54,9 @@ body: Padding(
             //settings widget 01
             Center(
               child: CustomTextField(
-                firstLine: "First Line Text",
+                firstLine: "Receive Notifications",
                 firstLineStyle: const TextStyle(
-                  fontSize: 12,
+                  fontSize: 14,
                   color: PaletteLightMode.titleColor,
                 ),
                 controller: TextEditingController(),
@@ -70,14 +70,14 @@ body: Padding(
                   // onTap function for backIcon
                 },
                 frontIcon: IconConstants.bellOutlinedIcon,
-                backIcon: IconConstants.moonIcon,
+                backIcon: IconConstants.toggleOffIcon,
                 frontIconScale: 50,
-                backIconScale: 50,
+                backIconScale: 60,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
                 backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
-                boxheight: 65,
+                boxheight: 75,
                 borderRadius:10,
                 padding: 16,
               ),
@@ -89,7 +89,7 @@ body: Padding(
             const Text(
               'Theme',
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 14,
                 fontFamily: "inter",
                 color: PaletteLightMode.titleColor,
               ),
@@ -97,9 +97,9 @@ body: Padding(
 //settings widget 02
           Center(
               child: CustomTextField(
-                firstLine: "First Line Text",
+                firstLine: "Dark Mode",
                 firstLineStyle: const TextStyle(
-                  fontSize: 12,
+                  fontSize: 14,
                   color: PaletteLightMode.titleColor,
                 ),
                 controller: TextEditingController(),
@@ -113,14 +113,14 @@ body: Padding(
                   // onTap function for backIcon
                 },
                 frontIcon: IconConstants.moonIcon,
-                backIcon: IconConstants.moonIcon,
-                frontIconScale: 50,
-                backIconScale: 50,
+                backIcon: IconConstants.toggleOffIcon,
+                frontIconScale: 35,
+                backIconScale: 60,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
                 backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
-                boxheight: 65,
+                boxheight: 75,
                 borderRadius:10,
                 padding: 16,
               ),
@@ -129,9 +129,9 @@ body: Padding(
 //settings widget 03
              Center(
               child: CustomTextField(
-                firstLine: "First Line Text",
+                firstLine: "Auto Dark Mode",
                 firstLineStyle: const TextStyle(
-                  fontSize: 12,
+                  fontSize: 14,
                   color: PaletteLightMode.titleColor,
                 ),
                 controller: TextEditingController(),
@@ -144,15 +144,15 @@ body: Padding(
                 ontapBackIcon: () {
                   // onTap function for backIcon
                 },
-                frontIcon: IconConstants.bellOutlinedIcon,
-                backIcon: IconConstants.moonIcon,
+                frontIcon: IconConstants.darkNightModeIcon,
+                backIcon: IconConstants.toggleOffIcon,
                 frontIconScale: 50,
-                backIconScale: 50,
+                backIconScale: 60,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
                 backgroundColor: Colors.white,
                 boxwidth: 369.84,
-                boxheight: 65,
+                boxheight: 75,
                 borderRadius:10,
                 padding: 16,
               ),
@@ -172,5 +172,21 @@ body: Padding(
         ),
       );
     
+  }
+}
+
+void main() {
+  runApp(const MainApp());
+}
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: AppThemeLight.theme,
+      debugShowCheckedModeBanner: false ,
+      home: const SettingsPage(),
+    );
   }
 }

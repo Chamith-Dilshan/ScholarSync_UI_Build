@@ -41,7 +41,7 @@ const NotificationsPage({Key? key}) : super(key: key);
             const Text(
               'Today',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 14,
                 fontFamily: "inter",
                 color: PaletteLightMode.textColor,
               ),
@@ -53,7 +53,7 @@ const NotificationsPage({Key? key}) : super(key: key);
                 firstLine: "Lecture hall allocation",
                 secondPartFirstline: "has been updated",
                 thirdLine: "20 minutes ago",
-                firstLineStyle: const TextStyle(fontSize: 12, color: PaletteLightMode.textColor),
+                firstLineStyle: const TextStyle(fontSize: 13, color: PaletteLightMode.textColor),
                 thirdLineStyle: const TextStyle(fontSize: 9, color: PaletteLightMode.secondaryTextColor),
                 secondPartFirstLineStyle: const TextStyle(fontWeight: FontWeight.bold),
                 controller: TextEditingController(),
@@ -66,15 +66,15 @@ const NotificationsPage({Key? key}) : super(key: key);
                 ontapBackIcon: () {
                   // onTap function for backIcon
                 },
-                frontIcon: IconConstants.bellOutlinedIcon,
-                backIcon: IconConstants.moonIcon,
+                frontIcon: IconConstants.calendarIcon,
+                // backIcon: IconConstants.moonIcon,
                 frontIconScale: 50,
                 backIconScale: 50,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
                 backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
-                boxheight: 65,
+                boxheight: 75,
                 borderRadius:10,
                 padding: 16,
               ),
@@ -84,7 +84,7 @@ const NotificationsPage({Key? key}) : super(key: key);
         const Text(
               'Yesterday',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 14,
                 fontFamily: "inter",
                 color: PaletteLightMode.textColor,
               ),
@@ -94,7 +94,7 @@ const NotificationsPage({Key? key}) : super(key: key);
                 firstLine: "There are upcoming",
                 secondPartFirstline: "lectures",
                 thirdLine: "30 minutes ago",
-                firstLineStyle: const TextStyle(fontSize: 12, color: PaletteLightMode.textColor),
+                firstLineStyle: const TextStyle(fontSize: 13, color: PaletteLightMode.textColor),
                 thirdLineStyle: const TextStyle(fontSize: 9, color: PaletteLightMode.secondaryTextColor),
                 secondPartFirstLineStyle: const TextStyle(fontWeight: FontWeight.bold),
                 controller: TextEditingController(),
@@ -108,14 +108,14 @@ const NotificationsPage({Key? key}) : super(key: key);
                   // onTap function for backIcon
                 },
                 frontIcon: IconConstants.bellOutlinedIcon,
-                backIcon: IconConstants.moonIcon,
+                // backIcon: IconConstants.moonIcon,
                 frontIconScale: 50,
                 backIconScale: 50,
                 borderColor: PaletteLightMode.transparentColor,
                 borderWidth: 0,
                 backgroundColor: PaletteLightMode.backgroundColor,
                 boxwidth: 369.84,
-                boxheight: 65,
+                boxheight: 75,
                 borderRadius:10,
                 padding: 16,
               ),
@@ -126,7 +126,7 @@ const NotificationsPage({Key? key}) : super(key: key);
         const Text(
               'Previous',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 14,
                 fontFamily: "inter",
                 color: PaletteLightMode.textColor,
               ),
