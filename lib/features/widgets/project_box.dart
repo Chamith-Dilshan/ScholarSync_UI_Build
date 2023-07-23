@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
 
 class ProjectBox extends StatelessWidget {
   final String projectNumber;
@@ -19,11 +20,11 @@ class ProjectBox extends StatelessWidget {
    return Container(
     padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: PaletteLightMode.backgroundColor,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
+            color: PaletteLightMode.secondaryTextColor.withOpacity(0.3),
             spreadRadius: 2,
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -45,7 +46,7 @@ class ProjectBox extends StatelessWidget {
           Text(
             projectName,
             style: const TextStyle(
-              color: Colors.black,
+              color: PaletteLightMode.titleColor,
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
@@ -70,7 +71,7 @@ class ProjectBox extends StatelessWidget {
                 height: 20,
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
-                  color: Colors.black,
+                  color: PaletteLightMode.secondaryGreenColor,
                   borderRadius: BorderRadius.circular(7),
                 
                 ),
@@ -82,7 +83,7 @@ class ProjectBox extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 11,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.grey,
+                                color: PaletteLightMode.secondaryTextColor
                               ),
                             ),
                   ),
@@ -103,11 +104,11 @@ class AddProjectBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: PaletteLightMode.backgroundColor,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
+            color: PaletteLightMode.secondaryTextColor.withOpacity(0.3),
             spreadRadius: 2,
             blurRadius: 4,
             offset: const Offset(0, 2),
