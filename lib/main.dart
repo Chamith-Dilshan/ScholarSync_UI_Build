@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/features/view/kuppi_page.dart';
-import 'package:scholars_mobileapp/features/view/my_profile_page.dart';
-import 'package:scholars_mobileapp/features/view/notifications_page.dart';
 import 'package:scholars_mobileapp/theme/app_theme.dart';
-import 'package:scholars_mobileapp/common/bottom_nav_bar.dart';
+import 'common/bottom_nav_bar.dart';
+import 'features/view/kuppi_page.dart';
+import 'features/view/my_profile_page.dart';
+import 'features/view/notifications_page.dart';
 
 void main() {
   runApp(const MainApp());
