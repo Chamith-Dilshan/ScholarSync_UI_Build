@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:scholars_mobileapp/common/rounded_small_button.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/image_constants.dart';
@@ -16,12 +17,14 @@ class _LogInPageState extends State<LogInPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   bool isChecked= false;
+  bool _obscureText =true;
 
   @override
   void dispose(){
     super.dispose();
     emailController.dispose();
     passwordController.dispose();
+    
   }
 
   @override
@@ -47,7 +50,7 @@ class _LogInPageState extends State<LogInPage> {
               width: 350,
               height: 400,
               decoration: const BoxDecoration(
-                color: Palette.lightBackgroundColor,
+                color: PaletteLightMode.backgroundColor,
               ),
               child: Column(
                 children: [
@@ -70,16 +73,35 @@ class _LogInPageState extends State<LogInPage> {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  // Text field
+                  // Password Text field
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: AuthField(
+                    child: TextFormField(
                       controller: passwordController,
-                      hideText: true,
-                      hintText: 'Password',
-                      fontSize: 14,
-                      frontIcon: IconConstants.lockIcon,
-                      backIcon: IconConstants.eyeOpenIcon, 
+                      obscureText: _obscureText,
+                      decoration: InputDecoration(
+                        focusedBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: PaletteLightMode.secondaryGreenColor)
+                        ) ,
+                        contentPadding:const EdgeInsets.all(22),
+                        hintText: 'Password',
+                        hintStyle: const TextStyle(fontSize:14,),
+                        prefixIcon: Transform.scale(
+                          scale: 0.6,
+                          child: SvgPicture.asset(IconConstants.lockIcon),
+                        ),
+                        suffixIcon: Transform.scale(
+                          scale: 1.3,
+                          child: IconButton(
+                            onPressed: (){
+                              setState((){
+                                _obscureText = !_obscureText;
+                              });
+                            }, 
+                            icon: SvgPicture.asset(_obscureText ? IconConstants.eyeOpenIcon : IconConstants.eyeCloseIcon)
+                            ),
+                        ), 
+                      ),
                     ),
                   ),
                   const SizedBox(height: 15),
@@ -90,7 +112,7 @@ class _LogInPageState extends State<LogInPage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Checkbox(value: isChecked,
-                        activeColor: Palette.lightGreenColor,
+                        activeColor: PaletteLightMode.secondaryGreenColor,
                         tristate: false, 
                         onChanged:(bool? value){
                           setState(() {
@@ -104,7 +126,7 @@ class _LogInPageState extends State<LogInPage> {
                             text: "Remember me",
                             style: TextStyle(
                               fontSize: 12,
-                              color: Palette.textColor,
+                              color: PaletteLightMode.textColor,
                             ),
                           ),
                         ),
@@ -112,14 +134,16 @@ class _LogInPageState extends State<LogInPage> {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  // Button
+                  //button
                   Align(
                     alignment: Alignment.center,
                     child: RoundedSmallbutton(
-                      onTap: () {},
+                      onTap: () {
+                        //button onTap Funtion
+                      },
                       lable: 'Login',
-                      backgroundColor: Palette.lightGreenColor,
-                      textColor: Palette.lightBackgroundColor,
+                      backgroundColor: PaletteLightMode.secondaryGreenColor,
+                      textColor: PaletteLightMode.secondaryGreenColor,
                       fontsize: 14,
                     ),
                   ),
