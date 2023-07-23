@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
+import 'package:scholars_mobileapp/features/widgets/profile_info.dart';
 
 class MyProfilePage extends StatefulWidget {
   const MyProfilePage({super.key});
@@ -38,7 +39,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
     body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          //const ProfileInfo(),
+         const ProfileInfo(),
           const SizedBox(height: 11),
           Padding(
             padding: const EdgeInsets.only(left: 25,right: 25),
