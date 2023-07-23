@@ -4,6 +4,7 @@ import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/features/view/login_page.dart';
 import 'package:scholars_mobileapp/features/widgets/kuppi_widget.dart';
 import 'package:scholars_mobileapp/constants/image_constants.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
 
 import '../../constants/icon_constants.dart';
 
@@ -55,15 +56,64 @@ class KuppiPage extends StatelessWidget {
                 SizedBox(height: 20),
                 ImageWithTextWidget(
                   title: 'Mathematics for Computing',
-                  subtitle: 'Subtitle 2',
+                  subtitle: 'by ATD Gamage',
                   date: '30th July, 2023',
                   imagePath: ImageConstants.kuppi1,
                 ),
               ],
             ),
           ),
+          // White box with plus icon as a button
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+            child: Container(
+              width: double.infinity,
+              height: 60,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color.fromRGBO(11, 24, 43, 0.08),
+                    offset: Offset(8, 8),
+                    blurRadius: 24,
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => LogInPage()),
+                      // );
+                    },
+                    child: Container(
+                      width: 45,
+                      height: 45,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: PaletteLightMode.secondaryGreenColor,
+                      ),
+                      child: const Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: 35,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   // Add your bottom navigation bar items here
+      // ),
     );
   }
 }
