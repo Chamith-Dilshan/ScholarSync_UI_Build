@@ -24,13 +24,13 @@ class _NavBarState extends State<NavBar> {
       width: 410,
       height: 70,
       decoration: const BoxDecoration(
-        color: PaletteLightMode.secondaryGreenColor,
+        color: PaletteLightMode.primaryGreenColor,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           ButtonIcon(
-            icon: IconConstants.googleDriveIcon,
+            icon: IconConstants.homeIcon,
             iconColor: _selectedIndex == 0 ? PaletteLightMode.backgroundColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
@@ -42,7 +42,7 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           ButtonIcon(
-            icon: IconConstants.leftArrowIcon,
+            icon: IconConstants.calendarIcon,
             iconColor: _selectedIndex == 1 ? PaletteLightMode.secondaryGreenColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
@@ -54,9 +54,9 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           ButtonIcon(
-            icon: IconConstants.leftArrowIcon,
-            iconColor: _selectedIndex == 2 ? PaletteLightMode.backgroundColor : PaletteLightMode.secondaryGreenColor,
-            size: 38.5,
+            icon: IconConstants.addButtonIcon,
+            iconColor: _selectedIndex == 2 ? PaletteLightMode.backgroundColor : PaletteLightMode.backgroundColor,
+            size: 60,
             onTap: () {
               setState(() {
                 _selectedIndex = 2;
@@ -78,7 +78,7 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           ButtonIcon(
-            icon: IconConstants.peopleIcon,
+            icon: IconConstants.userFilledIcon,
             iconColor: _selectedIndex == 4 ? PaletteLightMode.backgroundColor : PaletteLightMode.secondaryGreenColor,
             size: 38.5,
             onTap: () {
