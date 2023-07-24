@@ -30,4 +30,8 @@ class IconConstants {
   static const String graduationHatIcon = '$_svgPath/hat_graduation.svg';
   static const String addButtonIcon = '$_svgPath/add_button.svg';
   static const String personIcon = '$_svgPath/person.svg';
+  static const String profileIcon = '$_svgPath/profile.svg';
+  static const String horizontalDotsIcon = '$_svgPath/horizontal_dots.svg';
+  static const String cameraIcon = '$_svgPath/camera.svg';
+  static const String projectIcon = '$_svgPath/project_management.svg';
 }
