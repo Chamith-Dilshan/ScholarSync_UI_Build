@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/nav_bar.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/features/view/login_page.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
