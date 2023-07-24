@@ -28,7 +28,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
         title: 'My Profile',
         fontSize: 22,
         fontWeight: FontWeight.w600,
-        titleCenter: true,
+        titleCenter: false,
         backIcon: IconConstants.hamburgerMenuIcon,
         onFrontIconButtonpressed: () {
           /* Navigator.push(
