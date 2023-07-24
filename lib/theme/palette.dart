@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 //this class has pallete color information
 class PaletteLightMode {
+  static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color backgroundColor = Color(0xFFFBFBFB);
   static const Color titleColor = Color(0xFF181818);
   static const Color textColor = Color(0xFF3A3F47);
@@ -10,4 +11,5 @@ class PaletteLightMode {
   static const Color secondaryGreenColor = Color(0xFF6A994E);
   static const Color primaryRedColor = Color(0xFFCC0025);
   static const Color transparentColor = Color(0x00000000);
+  static const Color shadowColor = Color(0xFF0B182B);
 }

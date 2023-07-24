@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/features/view/home_page.dart';
+import 'package:scholars_mobileapp/features/view/login_page.dart';
 
 class MyPage extends StatelessWidget {
   const MyPage({Key? key}) : super(key: key);
@@ -20,13 +20,13 @@ class MyPage extends StatelessWidget {
         onFrontIconButtonpressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const HomePage()),
+            MaterialPageRoute(builder: (context) => const LogInPage()),
           );
         },
         onBackIconButtonpressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const HomePage()),
+            MaterialPageRoute(builder: (context) => const LogInPage()),
           );
         },
       ),
