@@ -24,8 +24,8 @@ class LecturerInformation extends StatelessWidget {
         boxShadow: const [
           BoxShadow(
             color: PaletteLightMode.shadowColor,
-            offset: Offset(0, 2),
-            blurRadius: 4.0,
+            offset: Offset(2, 4),
+            blurRadius: 10.0,
           ),
         ],
       ),
@@ -54,13 +54,16 @@ class LecturerInformation extends StatelessWidget {
               Text(
                 name,
                 style:
-                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    const TextStyle(
+                      fontSize: 18, 
+                      fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 6.0),
               Text(
                 email,
                 style: const TextStyle(
-                    fontSize: 14, color: PaletteLightMode.secondaryTextColor),
+                    fontSize: 14, 
+                    color: PaletteLightMode.secondaryTextColor),
               ),
             ],
           ),
