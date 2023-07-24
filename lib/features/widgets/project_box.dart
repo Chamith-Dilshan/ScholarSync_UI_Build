@@ -100,31 +100,4 @@ class ProjectBox extends StatelessWidget {
   }
 }
 
-class AddProjectBox extends StatelessWidget {
-  const AddProjectBox({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: PaletteLightMode.backgroundColor,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: PaletteLightMode.secondaryTextColor.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 4,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: IconButton(
-        icon: SvgPicture.asset(IconConstants.addButtonIcon),
-        onPressed: () {
-          // Handle button press
-        },
-      ),
-    );
-  }
-}
 

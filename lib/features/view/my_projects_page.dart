@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scholars_mobileapp/common/search_bar_2.dart';
@@ -28,9 +30,7 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: UIConstants.appBar(
         title: 'My Projects',
         fontSize: 22,
@@ -102,12 +102,7 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
             ),
           ],
         ),
-       /* bottomNavigationBar: MyBottomNavigationBar(
-          currentIndex: _currentIndex,
-          onTabTapped: _onTabTapped,
-        ),*/
-      ),
-    );
+      );
   }
 
   Widget _buildAddProjectBox() {
@@ -138,11 +133,13 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
           ),
           // The add icon in the center of the circle
           IconButton(
-            icon: SvgPicture.asset(IconConstants.addButtonIcon),
+            icon: SvgPicture.asset(
+              IconConstants.addButtonIcon,
+              color: PaletteLightMode.whiteColor,
+              ),
             onPressed: () {
               // Handle button press
             },
-            color: PaletteLightMode.whiteColor,
           ),
         ],
       ),
