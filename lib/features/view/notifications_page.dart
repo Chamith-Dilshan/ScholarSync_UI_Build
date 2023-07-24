@@ -1,12 +1,12 @@
 
 import 'package:flutter/material.dart';
-// import 'package:scholars_mobileapp/common/button_icon.dart';
-import 'package:scholars_mobileapp/common/nav_bar.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 import 'package:scholars_mobileapp/common/custom_textfield.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/features/view/login_page.dart';
+
+
 
 
 class NotificationsPage extends StatelessWidget {
@@ -133,13 +133,7 @@ const NotificationsPage({Key? key}) : super(key: key);
 
     ],)
    ),
-
-  bottomNavigationBar: NavBar(
-
-          onItemSelected: (int index) {
-          },
-        ),
-      );
+    );
   }
 }
 
