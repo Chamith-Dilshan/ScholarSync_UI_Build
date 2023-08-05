@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String label;
