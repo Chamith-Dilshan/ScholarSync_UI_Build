@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
 class ProfileInfo extends StatelessWidget {
@@ -45,9 +44,9 @@ class ProfileInfo extends StatelessWidget {
                         iconSize: 18, // Set the desired icon size
                         icon: const Icon(
                           //have to add a camera icon
-                          //IconConstants.camer_icon
+                          //icon: SvgPicture.asset(IconConstants.cameraIcon),
                           Icons.camera_alt,
-                          color: PaletteLightMode.backgroundColor, 
+                          color: PaletteLightMode.whiteColor, 
                         ),
                       ),
                     ),
@@ -58,7 +57,7 @@ class ProfileInfo extends StatelessWidget {
                   'ATD Gamage - 24598',
                   style: TextStyle(
                     fontSize: 20,
-                    color: PaletteLightMode.secondaryTextColor,
+                    color: PaletteLightMode.whiteColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -66,14 +65,14 @@ class ProfileInfo extends StatelessWidget {
                 const Text(
                   'Bsc.(Hons) in Software Engineering - 24598',
                   style: TextStyle(
-                    color: PaletteLightMode.secondaryTextColor,
+                    color: PaletteLightMode.whiteColor,
                     fontSize: 14,
                   ),
                 ),
                 const Text(
                   'Batch - 21.1',
                   style: TextStyle(
-                    color: PaletteLightMode.secondaryTextColor,
+                    color: PaletteLightMode.whiteColor,
                     fontSize: 14,
                   ),
                 ),

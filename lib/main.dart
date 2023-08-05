@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/features/view/academic_staff_page.dart';
+import 'package:scholars_mobileapp/features/view/my_projects_page.dart';
 import 'package:scholars_mobileapp/theme/app_theme.dart';
 import 'common/bottom_nav_bar.dart';
 import 'features/view/kuppi_page.dart';
@@ -49,9 +51,9 @@ class _MainAppState extends State<MainApp> {
       case 0:
         return const KuppiPage();
       case 1:
-        return const KuppiPage();
+        return const MyProjectsPage();
       case 2:
-        return const KuppiPage();
+        return const AcademicStaffPage();
       case 3:
         return const NotificationsPage();
       case 4:
