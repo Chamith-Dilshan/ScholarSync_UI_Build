@@ -8,8 +8,7 @@ import 'package:scholars_mobileapp/features/widgets/kuppi_widget.dart';
 import 'package:scholars_mobileapp/constants/image_constants.dart';
 import 'package:scholars_mobileapp/features/widgets/reusable_form_dialog.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
-
-import '../../constants/icon_constants.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
 
 class KuppiPage extends StatelessWidget {
   const KuppiPage({super.key});
