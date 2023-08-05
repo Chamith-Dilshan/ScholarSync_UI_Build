@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:scholars_mobileapp/common/button_icon.dart';
 import 'package:scholars_mobileapp/common/search_bar_2.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/features/view/home_page.dart';
@@ -111,27 +112,23 @@ void _showFormDialog(BuildContext context) {
                       offset: Offset(8, 8),
                       blurRadius: 24,
                       spreadRadius: 0,
-                    ),
+                    )
                   ],
                 ),
               ),
               Container(
-                width: 40,
-                height: 40,
-                decoration: const BoxDecoration(
-                  color: PaletteLightMode.secondaryTextColor,
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  icon: const Icon(
-                    Icons.camera_alt,
-                    color: PaletteLightMode.whiteColor,
+                  width: 40,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                    color: PaletteLightMode.secondaryTextColor,
+                    shape: BoxShape.circle,
                   ),
-                  onPressed: () {
-                    // Implement the camera button action here
-                  },
-                ),
-              ),
+                  child: ButtonIcon(
+                    icon: IconConstants.cameraIcon,
+                    iconColor: PaletteLightMode.whiteColor,
+                    size: 20,
+                    onTap: () {},
+                  )),
             ],
           ),
           const SizedBox(height: 15),
