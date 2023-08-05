@@ -133,12 +133,6 @@ const NotificationsPage({Key? key}) : super(key: key);
 
     ],)
    ),
-
-  bottomNavigationBar: NavBar(
-
-          onItemSelected: (int index) {
-          },
-        ),
       );
   }
 }
