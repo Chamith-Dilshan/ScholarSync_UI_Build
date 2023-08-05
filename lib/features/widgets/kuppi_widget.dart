@@ -27,11 +27,11 @@ class _ImageWithTextWidgetState extends State<ImageWithTextWidget> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: PaletteLightMode.whiteColor,
         borderRadius: BorderRadius.circular(10),
         boxShadow: const [
           BoxShadow(
-            color: Color.fromRGBO(11, 24, 43, 0.08),
+            color: PaletteLightMode.shadowColor,
             offset: Offset(8, 8),
             blurRadius: 24,
             spreadRadius: 0,
