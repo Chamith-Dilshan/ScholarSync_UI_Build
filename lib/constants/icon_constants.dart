@@ -31,4 +31,5 @@ class IconConstants {
   static const String addButtonIcon = '$_svgPath/add_button.svg';
   static const String personIcon = '$_svgPath/person.svg';
   static const String closeIcon = '$_svgPath/close.svg';
+  static const String cameraIcon = '$_svgPath/camera.svg';
 }
