@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:scholars_mobileapp/common/search_bar_2.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
+import 'package:scholars_mobileapp/features/view/home_page.dart';
 import 'package:scholars_mobileapp/features/widgets/text_form_field.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/features/view/login_page.dart';
 import 'package:scholars_mobileapp/features/widgets/kuppi_widget.dart';
 import 'package:scholars_mobileapp/constants/image_constants.dart';
 import 'package:scholars_mobileapp/features/widgets/reusable_form_dialog.dart';
@@ -25,15 +25,15 @@ class KuppiPage extends StatelessWidget {
           backIcon: IconConstants.hamburgerMenuIcon,
           frontIconToolTip: 'Back to login page',
           onFrontIconButtonpressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const LogInPage()),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => const HomePage()),
+            // );
           },
           onBackIconButtonpressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const LogInPage()),
+              MaterialPageRoute(builder: (context) => const HomePage()),
             );
           },
         ),
@@ -103,11 +103,11 @@ void _showFormDialog(BuildContext context) {
                 width: 150,
                 height: 150,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: PaletteLightMode.whiteColor,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: const [
                     BoxShadow(
-                      color: Color.fromRGBO(11, 24, 43, 0.08),
+                      color: PaletteLightMode.shadowColor,
                       offset: Offset(8, 8),
                       blurRadius: 24,
                       spreadRadius: 0,
