@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
@@ -25,7 +26,7 @@ class ProjectBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: PaletteLightMode.secondaryTextColor.withOpacity(0.3),
+            color: PaletteLightMode.shadowColor.withOpacity(0.3),
             spreadRadius: 2,
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -39,7 +40,7 @@ class ProjectBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               //have to add a icon into icon folder
-              const Icon(Icons.folder),//const Icon(IconConstants.folder_icon)
+              const Icon(Icons.folder),//icon: SvgPicture.asset(IconConstants.folderIcon),
               Text('Project $projectNumber'),
               const Icon(Icons.more_horiz),
             ],
@@ -85,7 +86,7 @@ class ProjectBox extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 11,
                                 fontWeight: FontWeight.bold,
-                                color: PaletteLightMode.secondaryTextColor
+                                color: PaletteLightMode.whiteColor
                               ),
                             ),
                   ),
@@ -99,31 +100,4 @@ class ProjectBox extends StatelessWidget {
   }
 }
 
-class AddProjectBox extends StatelessWidget {
-  const AddProjectBox({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: PaletteLightMode.backgroundColor,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: PaletteLightMode.secondaryTextColor.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 4,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: IconButton(
-        icon: const Text(IconConstants.addButtonIcon),
-        onPressed: () {
-          // Handle button press
-        },
-      ),
-    );
-  }
-}
 

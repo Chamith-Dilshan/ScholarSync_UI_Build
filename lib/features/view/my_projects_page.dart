@@ -1,5 +1,7 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scholars_mobileapp/common/search_bar_2.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
@@ -18,38 +20,37 @@ class MyProjectsPage extends StatefulWidget {
 }
 
 class _MyProjectsPageState extends State<MyProjectsPage> {
-  int _currentIndex = 0;
+ /* int _currentIndex = 0;
 
   void _onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: UIConstants.appBar(
-          title: 'My Projects',
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          titleCenter: false,
-          backIcon: IconConstants.hamburgerMenuIcon,
-          onFrontIconButtonpressed: () {
-            /* Navigator.push(
+        title: 'My Projects',
+        fontSize: 22,
+        fontWeight: FontWeight.w600,
+        titleCenter: true,
+        frontIcon: IconConstants.leftArrowIcon,
+        backIcon: IconConstants.hamburgerMenuIcon,
+        onFrontIconButtonpressed: () {
+          /* Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const LogInPage()),
           );*/
-          },
-          onBackIconButtonpressed: () {
-            /* Navigator.push(
+        },
+        onBackIconButtonpressed: () {
+          /* Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const LogInPage()),
           );*/
-          },
-        ),
+        },
+      ),
         body: Column(
           children: [
             CustomSearchBar(
@@ -101,12 +102,7 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
             ),
           ],
         ),
-        bottomNavigationBar: MyBottomNavigationBar(
-          currentIndex: _currentIndex,
-          onTabTapped: _onTabTapped,
-        ),
-      ),
-    );
+      );
   }
 
   Widget _buildAddProjectBox() {
@@ -116,7 +112,7 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: PaletteLightMode.textColor.withOpacity(0.3),
+            color: PaletteLightMode.shadowColor.withOpacity(0.3),
             spreadRadius: 2,
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -137,11 +133,13 @@ class _MyProjectsPageState extends State<MyProjectsPage> {
           ),
           // The add icon in the center of the circle
           IconButton(
-            icon: const Text(IconConstants.addButtonIcon),
+            icon: SvgPicture.asset(
+              IconConstants.addButtonIcon,
+              color: PaletteLightMode.whiteColor,
+              ),
             onPressed: () {
               // Handle button press
             },
-            color: PaletteLightMode.backgroundColor,
           ),
         ],
       ),
