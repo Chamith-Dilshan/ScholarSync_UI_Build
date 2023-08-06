@@ -100,6 +100,10 @@ class _MyProfilePageState extends State<MyProfilePage> {
           ),
         ],
       ),
+      /*     bottomNavigationBar: MyBottomNavigationBar(
+           currentIndex: _currentIndex,
+           onTabTapped: _onTabTapped,
+        ),*/
     );
   }
 }
