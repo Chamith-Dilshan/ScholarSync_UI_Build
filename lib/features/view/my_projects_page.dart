@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:scholars_mobileapp/common/search_bar_2.dart';
+import 'package:scholars_mobileapp/common/search_bar.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/features/widgets/project_box.dart';

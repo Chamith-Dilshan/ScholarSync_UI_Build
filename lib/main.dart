@@ -1,7 +1,5 @@
 import 'package:calendar_view/calendar_view.dart';
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/features/view/academic_staff_page.dart';
-import 'package:scholars_mobileapp/features/view/my_projects_page.dart';
 import 'package:scholars_mobileapp/theme/app_theme.dart';
 import 'common/bottom_nav_bar.dart';
 import 'features/view/calendar_page.dart';
@@ -9,7 +7,6 @@ import 'features/view/home_page.dart';
 import 'features/view/kuppi_page.dart';
 import 'features/view/my_profile_page.dart';
 import 'features/view/notifications_page.dart';
-import 'features/view/home_page.dart';
 
 void main() {
   runApp(const MainApp());

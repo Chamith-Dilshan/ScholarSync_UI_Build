@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/constants/image_constants.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
 class ProfileInfo extends StatelessWidget {
@@ -28,7 +29,7 @@ class ProfileInfo extends StatelessWidget {
                   children: [
                     const CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage(''), // Add your image path here
+                      backgroundImage:AssetImage(ImageConstants.img1), // Add your image path here
                     ),
                     Container(
                       width: 32, // Set the desired width for the container
