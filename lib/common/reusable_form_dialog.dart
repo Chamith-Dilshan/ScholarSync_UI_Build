@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/common/custom_elevated_button.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
+
+import '../features/widgets/circular_icon_button.dart';
 
 class ReusableFormDialog extends StatefulWidget {
   final String title;
@@ -50,14 +51,14 @@ class _ReusableFormDialogState extends State<ReusableFormDialog> {
                 onTap: () {
                   Navigator.of(context).pop();
                 },
-                child: SvgPicture.asset(
-                  IconConstants.closeIcon,
-                  colorFilter: const ColorFilter.mode(
-                    PaletteLightMode.secondaryGreenColor,
-                    BlendMode.srcIn,
-                  ),
-                  width: 13,
-                  height: 13,
+                child: CircularIconButton(
+                  buttonSize: 30,
+                  iconAsset: IconConstants.closeIcon,
+                  iconColor: PaletteLightMode.secondaryGreenColor,
+                  buttonColor: PaletteLightMode.whiteColor,
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                 ),
               ),
             ),
