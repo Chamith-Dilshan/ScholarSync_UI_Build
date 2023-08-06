@@ -6,4 +6,7 @@ class ImageConstants {
   static const String clubBanner1 = '$_imagepath/club_banner1.png';
   static const String clubDP1 = '$_imagepath/club_dp1.png';
   static const String img1 = '$_imagepath/img1.jpeg';
+  static const String aiesec1 = '$_imagepath/aiesec1.jpeg';
+  static const String aiesec2 = '$_imagepath/aiesec2.jpeg';
+  static const String aiesec3 = '$_imagepath/aiesec3.jpeg';
 }
