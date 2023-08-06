@@ -12,6 +12,7 @@ class ReusableTextField extends StatefulWidget {
   final Color cursorColor;
   final double borderRadius;
   final bool isDense;
+  final bool isMultiline;
 
   final TextEditingController? controller;
 
@@ -28,6 +29,7 @@ class ReusableTextField extends StatefulWidget {
     this.borderRadius = 8.0,
     this.isDense = false,
     this.controller,
+    this.isMultiline = false,
   }) : super(key: key);
 
   @override
@@ -54,8 +56,12 @@ class _ReusableTextFieldState extends State<ReusableTextField> {
           height: 4,
         ),
         SizedBox(
-          height: _hasError ? 50 : 30,
+          height: _calculateHeight(),
           child: TextFormField(
+            keyboardType: widget.isMultiline
+                ? TextInputType.multiline
+                : TextInputType.text,
+            maxLines: widget.isMultiline ? 10 : 1,
             controller: widget.controller,
             initialValue: widget.initialValue,
             validator: (value) {
@@ -78,13 +84,6 @@ class _ReusableTextFieldState extends State<ReusableTextField> {
                   color: widget.borderColor,
                 ),
               ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(widget.borderRadius),
-                borderSide: BorderSide(
-                  width: 1,
-                  color: widget.borderColor,
-                ),
-              ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(widget.borderRadius),
                 borderSide: BorderSide(
@@ -93,7 +92,7 @@ class _ReusableTextFieldState extends State<ReusableTextField> {
                 ),
               ),
               isDense: widget.isDense,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+              contentPadding: const EdgeInsets.all(8),
               floatingLabelBehavior: FloatingLabelBehavior.never,
               errorMaxLines: null,
             ),
@@ -104,5 +103,17 @@ class _ReusableTextFieldState extends State<ReusableTextField> {
         ),
       ],
     );
+  }
+
+  double _calculateHeight() {
+    if (_hasError && widget.isMultiline) {
+      return 150.0;
+    } else if (_hasError && !widget.isMultiline) {
+      return 50.0;
+    } else if (!_hasError && widget.isMultiline) {
+      return 100.0;
+    } else {
+      return 30.0;
+    }
   }
 }
