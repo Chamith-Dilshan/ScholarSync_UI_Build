@@ -9,6 +9,7 @@ import 'features/view/home_page.dart';
 import 'features/view/kuppi_page.dart';
 import 'features/view/my_profile_page.dart';
 import 'features/view/notifications_page.dart';
+import 'features/view/home_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -55,23 +56,27 @@ class _MainAppState extends State<MainApp> {
   Widget _getPage(int index) {
     switch (index) {
       case 0:
-        return const CalendarPage();
+        return const HomePage();
       case 1:
         return const CalendarPage();
       case 2:
-        return const AcademicStaffPage();
+        return const KuppiPage();
       case 3:
         return const NotificationsPage();
       case 4:
         return const MyProfilePage();
       default:
-        return const KuppiPage();
+        return const HomePage();
     }
   }
 
   int _getPageNumber(Widget page) {
-    if (page is KuppiPage) {
+    if (page is HomePage) {
       return 0;
+    } else if (page is CalendarPage) {
+      return 1;
+    } else if (page is KuppiPage) {
+      return 2;
     } else if (page is NotificationsPage) {
       return 3;
     } else if (page is MyProfilePage) {

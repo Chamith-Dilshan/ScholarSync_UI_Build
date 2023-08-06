@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/features/widgets/custom_elevated_button.dart';
+import 'package:scholars_mobileapp/common/custom_elevated_button.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
 class ReusableFormDialog extends StatefulWidget {

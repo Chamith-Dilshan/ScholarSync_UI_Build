@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:scholars_mobileapp/features/view/calendar_page.dart';
+import 'package:scholars_mobileapp/features/view/home_page.dart';
 import 'package:scholars_mobileapp/features/view/kuppi_page.dart';
 import 'package:scholars_mobileapp/features/view/my_profile_page.dart';
 import 'package:scholars_mobileapp/features/view/notifications_page.dart';
@@ -53,9 +55,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavItem(0, IconConstants.homeIcon, const KuppiPage(), 'Home'),
-            _buildNavItem(
-                1, IconConstants.calendarIcon, const KuppiPage(), 'Calendar'),
+            _buildNavItem(0, IconConstants.homeIcon, const HomePage(), 'Home'),
+            _buildNavItem(1, IconConstants.calendarIcon, const CalendarPage(),
+                'Calendar'),
             _buildAddNavItem(),
             _buildNavItem(3, IconConstants.bellFilledIcon,
                 const NotificationsPage(), 'Notifications'),

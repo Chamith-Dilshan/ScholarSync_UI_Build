@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:scholars_mobileapp/common/button_icon.dart';
-import 'package:scholars_mobileapp/common/search_bar_2.dart';
+import 'package:scholars_mobileapp/common/search_bar.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/features/view/home_page.dart';
-import 'package:scholars_mobileapp/features/widgets/text_form_field.dart';
+import 'package:scholars_mobileapp/common/text_form_field.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/features/widgets/kuppi_widget.dart';
 import 'package:scholars_mobileapp/constants/image_constants.dart';
-import 'package:scholars_mobileapp/features/widgets/reusable_form_dialog.dart';
+import 'package:scholars_mobileapp/common/reusable_form_dialog.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
 class KuppiPage extends StatelessWidget {
