@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/common/project_box.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
 import 'package:scholars_mobileapp/features/widgets/profile_info.dart';
-import 'package:scholars_mobileapp/features/widgets/project_box.dart';
 import 'package:scholars_mobileapp/theme/palette.dart';
 
 class MyProfilePage extends StatefulWidget {
