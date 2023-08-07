@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:scholars_mobileapp/features/widgets/circular_icon_button.dart';
 import 'package:scholars_mobileapp/constants/icon_constants.dart';
 import 'package:scholars_mobileapp/constants/ui_constants.dart';
@@ -18,7 +19,7 @@ class ClubProfilePage extends StatefulWidget {
 }
 
 class _ClubProfilePageState extends State<ClubProfilePage> {
-  bool isOwner = false;
+  bool isOwner = true;
   String clubName = 'AIESEC in NSBM';
   String about =
       'AIESEC is the world’s largest youth led organization advocating for youth leadership through global affairs. AIESEC in NSBM has over 90+ active global-minded and culturally sensitive members from across the island. As an Ofﬁcial Expansion, we have won the Most Outstanding Award and Most Progressive Expansion Award in 2018 & 2019, respectively.';
@@ -118,6 +119,24 @@ class _ClubProfilePageState extends State<ClubProfilePage> {
           ),
         ),
       ),
+      floatingActionButton: isOwner
+          ? FloatingActionButton(
+              backgroundColor: PaletteLightMode.secondaryGreenColor,
+              tooltip: 'Increment',
+              onPressed: () {
+                //add new event
+              },
+              child: SvgPicture.asset(
+                IconConstants.addButtonIcon,
+                colorFilter: const ColorFilter.mode(
+                  PaletteLightMode.whiteColor,
+                  BlendMode.srcIn,
+                ),
+                width: 25,
+                height: 25,
+              ),
+            )
+          : null,
     );
   }
 

@@ -10,6 +10,7 @@ class CustomCarousel extends StatefulWidget {
   final double containerPadding;
   final bool showIconButton;
   final bool enableAutoScroll;
+  final int maxImageCount;
 
   const CustomCarousel({
     Key? key,
@@ -17,7 +18,9 @@ class CustomCarousel extends StatefulWidget {
     this.containerPadding = 20.0,
     this.showIconButton = false,
     this.enableAutoScroll = true,
-  }) : super(key: key);
+    this.maxImageCount = 5,
+  })  : assert(maxImageCount >= 0),
+        super(key: key);
 
   @override
   State<CustomCarousel> createState() => _CustomCarouselState();
@@ -63,6 +66,10 @@ class _CustomCarouselState extends State<CustomCarousel> {
 
   @override
   Widget build(BuildContext context) {
+    // Take a sublist of the imageList up to the maxImageCount
+    final displayedImages =
+        widget.imageList.take(widget.maxImageCount).toList();
+
     return Column(
       children: [
         SizedBox(
@@ -84,7 +91,7 @@ class _CustomCarouselState extends State<CustomCarousel> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        widget.imageList[
+                        displayedImages[
                             index], // Use Image.asset for local assets
                         fit: BoxFit.cover,
                       ),
@@ -109,14 +116,14 @@ class _CustomCarouselState extends State<CustomCarousel> {
                 ],
               );
             },
-            itemCount: widget.imageList.length,
+            itemCount: displayedImages.length,
           ),
         ),
         const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
-            widget.imageList.length,
+            displayedImages.length,
             (index) => Container(
               margin: const EdgeInsets.all(5),
               width: 8,
