@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 //use this class to change the theme color of the app
 class AppThemeLight{

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:scholars_mobileapp/features/view/calendar_page.dart';
-import 'package:scholars_mobileapp/features/view/home_page.dart';
-import 'package:scholars_mobileapp/features/view/kuppi_page.dart';
-import 'package:scholars_mobileapp/features/view/my_profile_page.dart';
-import 'package:scholars_mobileapp/features/view/notifications_page.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
+import 'package:scholarsync/features/view/calendar_page.dart';
+import 'package:scholarsync/features/view/home_page.dart';
+import 'package:scholarsync/features/view/my_profile_page.dart';
+import 'package:scholarsync/features/view/notifications_page.dart';
+import 'package:scholarsync/theme/palette.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
 
 class BottomNavBar extends StatefulWidget {
   final int initialIndex;

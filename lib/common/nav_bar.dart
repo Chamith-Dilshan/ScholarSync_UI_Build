@@ -1,10 +1,10 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/button_icon.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/features/view/login_page.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/common/button_icon.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/features/view/login_page.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 class NavBar extends StatefulWidget {
   final void Function(int index) onItemSelected;

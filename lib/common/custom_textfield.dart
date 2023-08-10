@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/button_icon.dart';
+import 'package:scholarsync/common/button_icon.dart';
 
 class CustomTextField extends StatelessWidget {
   final String firstLine;

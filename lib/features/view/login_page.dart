@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:scholars_mobileapp/common/rounded_small_button.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/constants/image_constants.dart';
-import 'package:scholars_mobileapp/features/widgets/auth_field.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/features/widgets/rounded_small_button.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/constants/image_constants.dart';
+import 'package:scholarsync/features/widgets/auth_field.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
