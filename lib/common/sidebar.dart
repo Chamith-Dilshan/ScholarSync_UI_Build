@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/features/view/my_profile_page.dart';
-import 'package:scholars_mobileapp/features/view/settings_page.dart';
-import 'package:scholars_mobileapp/features/view/academic_staff_page.dart';
-import 'package:scholars_mobileapp/features/view/give_feedback.dart';
-import 'package:scholars_mobileapp/features/view/login_page.dart';
+import 'package:scholarsync/features/view/my_profile_page.dart';
+import 'package:scholarsync/features/view/settings_page.dart';
+import 'package:scholarsync/features/view/academic_staff_page.dart';
+import 'package:scholarsync/features/view/give_feedback.dart';
+import 'package:scholarsync/features/view/login_page.dart';
 
 class Sidebaryy extends StatefulWidget {
   const Sidebaryy({Key? key}) : super(key: key);

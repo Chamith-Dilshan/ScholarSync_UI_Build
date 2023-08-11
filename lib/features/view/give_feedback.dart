@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/nav_bar.dart';
+// import 'package:scholarsync/common/nav_bar.dart';
 import '../../theme/palette.dart';
 
 class FeedbackForm extends StatefulWidget {
   const FeedbackForm({super.key});
 
   @override
-  _FeedbackFormState createState() => _FeedbackFormState();
+  FeedbackFormState createState() => FeedbackFormState();
 }
 
-class _FeedbackFormState extends State<FeedbackForm> {
+class FeedbackFormState extends State<FeedbackForm> {
   final _formKey = GlobalKey<FormState>();
   int? _selectedIndex;
   final TextEditingController _controller1 = TextEditingController();
