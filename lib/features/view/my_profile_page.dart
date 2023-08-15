@@ -66,37 +66,43 @@ class _MyProfilePageState extends State<MyProfilePage> {
           ),
           const SizedBox(height: 5),
           Expanded(
-            child: GridView.count(
-              crossAxisCount: 2,
-              mainAxisSpacing: 18.0,
-              crossAxisSpacing: 25.0,
-              padding: const EdgeInsets.only(left: 25, right: 25),
-              children: const [
-                ProjectBox(
-                  projectNumber: '1',
-                  projectName: 'Project Name 1',
-                  date: '2023-07-23',
-                  githubLink: 'https://github.com/project1',
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  left: 5, right: 5, bottom: 25), // Add bottom padding
+              child: Scrollbar(
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 18.0,
+                  crossAxisSpacing: 25.0,
+                  padding: const EdgeInsets.only(left: 25, right: 25),
+                  children: const [
+                    ProjectBox(
+                      projectNumber: '1',
+                      projectName: 'Project Name 1',
+                      date: '2023-07-23',
+                      githubLink: 'https://github.com/project1',
+                    ),
+                    ProjectBox(
+                      projectNumber: '2',
+                      projectName: 'Project Name 2',
+                      date: '2023-07-24',
+                      githubLink: 'https://github.com/project2',
+                    ),
+                    ProjectBox(
+                      projectNumber: '3',
+                      projectName: 'Project Name 3',
+                      date: '2023-07-25',
+                      githubLink: 'https://github.com/project3',
+                    ),
+                    ProjectBox(
+                      projectNumber: '4',
+                      projectName: 'Project Name 4',
+                      date: '2023-07-26',
+                      githubLink: 'https://github.com/project4',
+                    ),
+                  ],
                 ),
-                ProjectBox(
-                  projectNumber: '2',
-                  projectName: 'Project Name 2',
-                  date: '2023-07-24',
-                  githubLink: 'https://github.com/project2',
-                ),
-                ProjectBox(
-                  projectNumber: '3',
-                  projectName: 'Project Name 3',
-                  date: '2023-07-25',
-                  githubLink: 'https://github.com/project3',
-                ),
-                ProjectBox(
-                  projectNumber: '4',
-                  projectName: 'Project Name 4',
-                  date: '2023-07-26',
-                  githubLink: 'https://github.com/project4',
-                ),
-              ],
+              ),
             ),
           ),
         ],
