@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/constants/ui_constants.dart';
+import 'package:scholarsync/features/view/home_page.dart';
 import 'package:scholarsync/features/widgets/academic_staff_page_tab.dart';
 import 'package:scholarsync/features/widgets/lecturer_info.dart';
 
@@ -14,13 +15,6 @@ class AcademicStaffPage extends StatefulWidget {
 class _AcademicStaffPageState extends State<AcademicStaffPage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  /*int _currentIndex = 0;
-
-  void _onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }*/
 
   @override
   void initState() {
@@ -39,10 +33,10 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
         frontIcon: IconConstants.leftArrowIcon,
         backIcon: IconConstants.hamburgerMenuIcon,
         onFrontIconButtonpressed: () {
-          /* Navigator.push(
+          Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const LogInPage()),
-          );*/
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
         },
         onBackIconButtonpressed: () {
           /* Navigator.push(
@@ -138,10 +132,6 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
           ),
         ],
       ),
-     /* bottomNavigationBar: MyBottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTabTapped: _onTabTapped,
-      ),*/
     );
   }
 }

@@ -9,4 +9,5 @@ class ImageConstants {
   static const String aiesec1 = '$_imagepath/aiesec1.jpeg';
   static const String aiesec2 = '$_imagepath/aiesec2.jpeg';
   static const String aiesec3 = '$_imagepath/aiesec3.jpeg';
+  static const String profileImage = '$_imagepath/profileImg.png"';
 }

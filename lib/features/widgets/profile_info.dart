@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/constants/image_constants.dart';
 import 'package:scholarsync/theme/palette.dart';
 
@@ -29,26 +31,24 @@ class ProfileInfo extends StatelessWidget {
                   children: [
                     const CircleAvatar(
                       radius: 50,
-                      backgroundImage:AssetImage(ImageConstants.img1), // Add your image path here
+                      backgroundImage: AssetImage(ImageConstants
+                          .profileImage), // Add your image path here
                     ),
                     Container(
                       width: 32, // Set the desired width for the container
                       height: 32, // Set the desired height for the container
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: PaletteLightMode.secondaryGreenColor, // Choose the background color you want for the camera icon
+                        color: PaletteLightMode
+                            .secondaryGreenColor, // Choose the background color you want for the camera icon
                       ),
                       child: IconButton(
                         onPressed: () {
                           // Handle camera icon pressed (profile edit page)
                         },
                         iconSize: 18, // Set the desired icon size
-                        icon: const Icon(
-                          //have to add a camera icon
-                          //icon: SvgPicture.asset(IconConstants.cameraIcon),
-                          Icons.camera_alt,
-                          color: PaletteLightMode.whiteColor, 
-                        ),
+                        icon: SvgPicture.asset(IconConstants.cameraIcon),
+                        color: PaletteLightMode.whiteColor,
                       ),
                     ),
                   ],
