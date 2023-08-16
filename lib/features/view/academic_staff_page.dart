@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/features/widgets/academic_staff_page_tab.dart';
-import 'package:scholars_mobileapp/features/widgets/lecturer_info.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/constants/ui_constants.dart';
+import 'package:scholarsync/features/widgets/academic_staff_page_tab.dart';
+import 'package:scholarsync/features/widgets/lecturer_info.dart';
 
 class AcademicStaffPage extends StatefulWidget {
   const AcademicStaffPage({super.key});
@@ -15,13 +14,13 @@ class AcademicStaffPage extends StatefulWidget {
 class _AcademicStaffPageState extends State<AcademicStaffPage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  int _currentIndex = 0;
+  /*int _currentIndex = 0;
 
   void _onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
-  }
+  }*/
 
   @override
   void initState() {
@@ -139,10 +138,10 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
           ),
         ],
       ),
-      bottomNavigationBar: MyBottomNavigationBar(
+     /* bottomNavigationBar: MyBottomNavigationBar(
         currentIndex: _currentIndex,
         onTabTapped: _onTabTapped,
-      ),
+      ),*/
     );
   }
 }

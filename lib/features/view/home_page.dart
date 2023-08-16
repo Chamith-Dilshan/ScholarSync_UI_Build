@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:scholars_mobileapp/common/custom_textfield.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/constants/image_constants.dart';
-import '../../common/search_bar_2.dart';
+import 'package:scholarsync/common/search_bar.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/constants/image_constants.dart';
 import '../../common/text_container.dart';
 import '../../theme/palette.dart';
 import '../widgets/carousel.dart';
@@ -105,7 +104,15 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 5,),
 
               //carousel
-              const Carousel(),
+              const Carousel(
+                imageList: [
+                  ImageConstants.kuppi1,
+                  ImageConstants.aiesec1,
+                  ImageConstants.aiesec2,
+                  ImageConstants.aiesec3,
+                  ImageConstants.aiesec2,
+                ],
+              ),
               const SizedBox(height: 5,),
 
               //text

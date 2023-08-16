@@ -1,54 +1,98 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:scholarsync/theme/palette.dart';
 
-import '../constants/icon_constants.dart';
-import '../theme/palette.dart';
+class CustomSearchBar extends StatefulWidget {
+  final String hint;
+  final Color? textColor;
+  final Color? iconColor;
+  final ValueChanged<String>? onSearchSubmitted;
 
-class MySearchBar extends StatelessWidget {
-  final String hintText;
-  final void Function(String)? onChanged;
+  const CustomSearchBar({
+    Key? key,
+    required this.hint,
+    this.textColor = PaletteLightMode.secondaryTextColor,
+    this.iconColor = PaletteLightMode.secondaryTextColor,
+    this.onSearchSubmitted,
+  }) : super(key: key);
 
-  const MySearchBar({super.key, 
-    required this.hintText,
-    this.onChanged,
-  });
+  @override
+  // ignore: library_private_types_in_public_api
+  _CustomSearchBarState createState() => _CustomSearchBarState();
+}
+
+class _CustomSearchBarState extends State<CustomSearchBar> {
+  late FocusNode _focusNode;
+  Color? _currentIconColor;
+
+  @override
+  void initState() {
+    super.initState();
+    _focusNode = FocusNode();
+    _currentIconColor = widget.iconColor;
+    _focusNode.addListener(_onFocusChange);
+  }
+
+  @override
+  void dispose() {
+    _focusNode.removeListener(_onFocusChange);
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  void _onFocusChange() {
+    setState(() {
+      _currentIconColor = _focusNode.hasFocus
+          ? PaletteLightMode.secondaryGreenColor
+          : widget.iconColor;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      child: Container(
-        decoration: BoxDecoration(
-          color: PaletteLightMode.backgroundColor,
-          borderRadius: BorderRadius.circular(8.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              spreadRadius: 2,
-              blurRadius: 4,
-              offset: const Offset(0, 2),
-            ),
-          ],
+    return Container(
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 18),
+      decoration: BoxDecoration(
+        boxShadow: const [
+          BoxShadow(
+            color: Color.fromRGBO(11, 24, 43, 0.08),
+            offset: Offset(8, 8),
+            blurRadius: 24,
+            spreadRadius: 0,
+          ),
+        ],
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          // Set hoverColor to transparent to remove the transparency effect
+          hoverColor: PaletteLightMode.transparentColor,
         ),
         child: TextField(
-          onChanged: onChanged,
+          onSubmitted: widget.onSearchSubmitted,
+          style: TextStyle(color: widget.textColor),
+          cursorColor: PaletteLightMode.secondaryGreenColor,
+          focusNode: _focusNode,
           decoration: InputDecoration(
-            hintText: hintText,
-            border: InputBorder.none,
-            prefixIcon: SvgPicture.asset(IconConstants.searchIcon),
+            filled: true,
+            fillColor: Colors.white,
+            hintText: widget.hint,
+            hintStyle: TextStyle(color: widget.textColor),
+            prefixIcon: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 27),
+              child: Icon(Icons.search, color: _currentIconColor),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.white, width: 1.0),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(
+                  color: PaletteLightMode.secondaryGreenColor, width: 1.0),
+              borderRadius: BorderRadius.circular(12),
+            ),
           ),
         ),
       ),
     );
   }
 }
-
-/*If you use this search bar you can write below code in the relevant file
-
-MySearchBar(
-              hintText: 'Search',
-              onChanged: (query) {
-                // Handle search query change
-              },
-            ),
-*/

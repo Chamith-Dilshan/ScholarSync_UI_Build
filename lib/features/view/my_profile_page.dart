@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/common/bottom_navigation_bar.dart';
-import 'package:scholars_mobileapp/features/widgets/profile_info.dart';
-import 'package:scholars_mobileapp/features/widgets/project_box.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/common/project_box.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/constants/ui_constants.dart';
+import 'package:scholarsync/features/widgets/profile_info.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 class MyProfilePage extends StatefulWidget {
   const MyProfilePage({super.key});
@@ -14,13 +13,13 @@ class MyProfilePage extends StatefulWidget {
 }
 
 class _MyProfilePageState extends State<MyProfilePage> {
-  int _currentIndex = 0;
+ /* int _currentIndex = 0;
 
   void _onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +27,15 @@ class _MyProfilePageState extends State<MyProfilePage> {
       appBar: UIConstants.appBar(
         title: 'My Profile',
         fontSize: 22,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w600,
         titleCenter: false,
         backIcon: IconConstants.hamburgerMenuIcon,
+        onFrontIconButtonpressed: () {
+          /* Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const LogInPage()),
+          );*/
+        },
         onBackIconButtonpressed: () {
           /* Navigator.push(
             context,
@@ -111,10 +116,10 @@ class _MyProfilePageState extends State<MyProfilePage> {
         ],
       ),
 
-         bottomNavigationBar: MyBottomNavigationBar(
+    /*     bottomNavigationBar: MyBottomNavigationBar(
            currentIndex: _currentIndex,
            onTabTapped: _onTabTapped,
-        ),
+        ),*/
     );
   }
 }

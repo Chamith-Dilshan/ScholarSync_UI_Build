@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 class LecturerInformation extends StatelessWidget {
   final String name;
@@ -23,9 +23,9 @@ class LecturerInformation extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.0),
         boxShadow: const [
           BoxShadow(
-            color: PaletteLightMode.textColor,
-            offset: Offset(0, 2),
-            blurRadius: 4.0,
+            color: PaletteLightMode.shadowColor,
+            offset: Offset(2, 4),
+            blurRadius: 10.0,
           ),
         ],
       ),
@@ -54,13 +54,16 @@ class LecturerInformation extends StatelessWidget {
               Text(
                 name,
                 style:
-                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    const TextStyle(
+                      fontSize: 18, 
+                      fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 6.0),
               Text(
                 email,
                 style: const TextStyle(
-                    fontSize: 14, color: PaletteLightMode.secondaryTextColor),
+                    fontSize: 14, 
+                    color: PaletteLightMode.secondaryTextColor),
               ),
             ],
           ),

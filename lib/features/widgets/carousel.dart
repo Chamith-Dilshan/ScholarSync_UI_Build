@@ -4,7 +4,12 @@ import '../../constants/image_constants.dart';
 import '../../theme/palette.dart';
 
 class Carousel extends StatefulWidget {
-  const Carousel({super.key});
+  final List<String>imageList;
+
+  const Carousel({
+    super.key,
+    this.imageList = const[],
+    });
 
   @override
   State<Carousel> createState() => _CarouselState();
@@ -15,17 +20,9 @@ class _CarouselState extends State<Carousel> {
   Timer? carouselTimer;
   int pageNo = 0;
 
-  List<String> imageList = [
-    ImageConstants.img1,
-    ImageConstants.img1,
-    ImageConstants.img1,
-    ImageConstants.img1,
-    ImageConstants.img1,
-  ];
-
   Timer getTimer() {
     return Timer.periodic(const Duration(seconds: 3), (timer) {
-      if (pageNo == imageList.length - 1) {
+      if (pageNo == widget.imageList.length - 1) {
         pageNo = 0;
       } else {
         pageNo++;
@@ -54,6 +51,19 @@ class _CarouselState extends State<Carousel> {
 
   @override
   Widget build(BuildContext context) {
+     List<String> imagesList = [...widget.imageList]; // Use the provided imageList
+
+    // Provide default images if the list is empty
+    if (imagesList.isEmpty) {
+      imagesList = [
+        ImageConstants.img1,
+        ImageConstants.img1,
+        ImageConstants.img1,
+        ImageConstants.img1,
+        ImageConstants.img1,
+      ];
+    }
+
     return Container(
       height: 300,
        child: Column(
@@ -100,7 +110,7 @@ class _CarouselState extends State<Carousel> {
                           height: scale * 200,
                           margin: const EdgeInsets.all(10),
                           child: Image.asset(
-                            imageList[index],
+                            imagesList[index],
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -108,14 +118,14 @@ class _CarouselState extends State<Carousel> {
                     },
                   );
                 },
-                itemCount: imageList.length,
+                itemCount: imagesList.length,
               ),
             ),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
-                imageList.length,
+                imagesList.length,
                 (index) => Container(
                   margin: const EdgeInsets.all(10),
                   width: 5,

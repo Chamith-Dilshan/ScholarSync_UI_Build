@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+// import 'package:scholarsync/common/nav_bar.dart';
+import '../../theme/palette.dart';
 
 class FeedbackForm extends StatefulWidget {
   const FeedbackForm({super.key});
 
   @override
-  _FeedbackFormState createState() => _FeedbackFormState();
+  FeedbackFormState createState() => FeedbackFormState();
 }
 
-class _FeedbackFormState extends State<FeedbackForm> {
+class FeedbackFormState extends State<FeedbackForm> {
   final _formKey = GlobalKey<FormState>();
   int? _selectedIndex;
   final TextEditingController _controller1 = TextEditingController();
@@ -16,10 +18,17 @@ class _FeedbackFormState extends State<FeedbackForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: PaletteLightMode.backgroundColor,
       appBar: AppBar(
-        title: const Text('Give Feedback'),
-        backgroundColor: Colors.green,
+        title: const Text(
+          'Give Feedback',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 18, 
+          ),
+          ),
+        backgroundColor: PaletteLightMode.backgroundColor,
+        elevation: 0,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -48,100 +57,115 @@ class _FeedbackFormState extends State<FeedbackForm> {
                         'Help us serve you better',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 20
+                          fontSize: 16
                           ),
                       ),
                       const SizedBox(height: 20),
                       const Text(
                         'How would you rate your overall experience with ScholarSync?*',
                         style: TextStyle(
-                          fontSize: 15
+                          fontSize: 13
                           ),
                       ),
                       const SizedBox(height: 15),
                         Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          _buildButton('Terrible', 0),
+                          feedbackColorBox('Terrible', Icons.sentiment_very_dissatisfied, 0),
                           const SizedBox(width: 2),
-                          _buildButton('Bad', 1),
+                          feedbackColorBox('Bad', Icons.sentiment_dissatisfied,1),
                           const SizedBox(width: 2),
-                          _buildButton('Okay', 2),
+                          feedbackColorBox('Okay', Icons.sentiment_neutral,2),
                           const SizedBox(width: 2),
-                          _buildButton('Good', 3),
+                          feedbackColorBox('Good', Icons.sentiment_satisfied,3),
                           const SizedBox(width: 2),
-                          _buildButton('Amazing', 4),
+                          feedbackColorBox('Amazing', Icons.sentiment_very_satisfied,4),
                         ],
                       ),
                       const SizedBox(height: 20),
-                      Column(
-                        children: [
-                          const Text('What specific features do you like most about the app?'),
-                          const SizedBox(height: 10),
-                          TextFormField(
-                            controller: _controller1,
-                            decoration:  InputDecoration(
-                              labelText: 'Rate your overall experience with the app',
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Colors.grey, width: 1),
+                      SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            const Text(
+                              'What specific features do you like most about the app?',
+                              style: TextStyle(
+                                fontSize: 13,
                               ),
-                              
-                              ),
-                            validator: (value) {
-                              if (value==null || value.isEmpty) {
-                                return 'Please enter your rating';
-                              }
-                              return null;
-                            },
-                          ),
-                          const SizedBox(height: 20),
-                          const Text('What improvements or new features would you like to see in future updates?'),
-                          const SizedBox(height: 10),
-                          TextFormField(
-                            controller: _controller2,
-                            decoration:  InputDecoration(
-                              labelText: 'Rate your overall experience with the app',
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Colors.grey, width: 1),
-                              ),
-                              
-                              ),
-                            validator: (value) {
-                              if (value==null || value.isEmpty) {
-                                return 'Please enter your suggestions';
-                              }
-                              return null;
-                            },
-                          ),
-                          const SizedBox(height: 20),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text('Any other feedback or suggestions?')
                             ),
-                            const SizedBox(height: 10),
-                          TextFormField(
-                            controller: _controller3,
-                            decoration:  InputDecoration(
-                              labelText: 'Rate your overall experience with the app',
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Colors.grey, width: 1),
+                            const SizedBox(height: 8),
+                            TextFormField(
+                              controller: _controller1,
+                              decoration:  InputDecoration(
+                                
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: const BorderSide(color: Colors.grey, width: 1),
+                                ),
+                                
+                                ),
+                              validator: (value) {
+                                if (value==null || value.isEmpty) {
+                                  return 'Please enter your rating';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            const Text(
+                              'What improvements or new features would you like to see in future updates?',
+                              style: TextStyle(
+                                fontSize: 13,
                               ),
-                              
+                            ),
+                            const SizedBox(height: 8),
+                            TextFormField(
+                              controller: _controller2,
+                              decoration:  InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: const BorderSide(color: Colors.grey, width: 1),
+                                ),
+                                
+                                ),
+                              validator: (value) {
+                                if (value==null || value.isEmpty) {
+                                  return 'Please enter your suggestions';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            const Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                'Any other feedback or suggestions?',
+                                style: TextStyle(
+                                  fontSize: 13,
+                                ),
+                              )
                               ),
-                            validator: (value) {
-                              if (value==null || value.isEmpty) {
-                                return 'Please enter your feedback';
-                              }
-                              return null;
-                            },
-                          ),
-                        ],
+                              const SizedBox(height: 8),
+                            TextFormField(
+                              controller: _controller3,
+                              decoration:  InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: const BorderSide(color: Colors.grey, width: 1),
+                                ),
+                                
+                                ),
+                              validator: (value) {
+                                if (value==null || value.isEmpty) {
+                                  return 'Please enter your feedback';
+                                }
+                                return null;
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                       
-                      const SizedBox(height: 30),
+                      
                       Center(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -174,13 +198,11 @@ class _FeedbackFormState extends State<FeedbackForm> {
           ),
         ),
       ),
+       
     );
   }
-  Widget _buildButton(String text, int index){
-    return SizedBox(
-      width: 62,
-      height: 70,
-      child: ElevatedButton(
+  Widget feedbackColorBox(String text, IconData icon,int index){
+    return ElevatedButton(
         onPressed: (){
           setState(() {
             _selectedIndex = index;
@@ -188,16 +210,24 @@ class _FeedbackFormState extends State<FeedbackForm> {
         },
           style: ElevatedButton.styleFrom(
             backgroundColor: index == _selectedIndex ? Colors.green :Colors.white,
+            fixedSize: const Size(62, 70,)
           ),
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 8,
-            color: index == _selectedIndex ? Colors.white : Colors.grey,
-          ),
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(height: 8),
+            Icon(icon, color: index == _selectedIndex ? const Color.fromARGB(255, 255, 255, 255) : Colors.grey, size: 30,),
+          const SizedBox(height: 12),
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 8,
+                color: index == _selectedIndex ? Colors.white : Colors.grey,
+              ),
+              ),
+          ],
+        ),
           
-      ),
-    );
+      );
   }
 }

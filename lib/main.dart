@@ -1,6 +1,9 @@
+import 'package:calendar_view/calendar_view.dart';
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/theme/app_theme.dart';
+import 'package:scholarsync/theme/app_theme.dart';
 import 'common/bottom_nav_bar.dart';
+import 'features/view/calendar_page.dart';
+import 'features/view/home_page.dart';
 import 'features/view/kuppi_page.dart';
 import 'features/view/my_profile_page.dart';
 import 'features/view/notifications_page.dart';
@@ -28,17 +31,20 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppThemeLight.theme,
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: _getPage(_selectedPageIndex),
-        bottomNavigationBar: BottomNavBar(
-          initialIndex: _selectedPageIndex,
-          onItemSelected: _onNavBarItemSelected,
-          navigateToPage: (context, page) {
-            _onNavBarItemSelected(_getPageNumber(page));
-          },
+    return CalendarControllerProvider(
+      controller: EventController(),
+      child: MaterialApp(
+        theme: AppThemeLight.theme,
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: _getPage(_selectedPageIndex),
+          bottomNavigationBar: BottomNavBar(
+            initialIndex: _selectedPageIndex,
+            onItemSelected: _onNavBarItemSelected,
+            navigateToPage: (context, page) {
+              _onNavBarItemSelected(_getPageNumber(page));
+            },
+          ),
         ),
       ),
     );
@@ -47,9 +53,9 @@ class _MainAppState extends State<MainApp> {
   Widget _getPage(int index) {
     switch (index) {
       case 0:
-        return const KuppiPage();
+        return const HomePage();
       case 1:
-        return const KuppiPage();
+        return const CalendarPage();
       case 2:
         return const KuppiPage();
       case 3:
@@ -57,13 +63,17 @@ class _MainAppState extends State<MainApp> {
       case 4:
         return const MyProfilePage();
       default:
-        return const KuppiPage();
+        return const HomePage();
     }
   }
 
   int _getPageNumber(Widget page) {
-    if (page is KuppiPage) {
+    if (page is HomePage) {
       return 0;
+    } else if (page is CalendarPage) {
+      return 1;
+    } else if (page is KuppiPage) {
+      return 2;
     } else if (page is NotificationsPage) {
       return 3;
     } else if (page is MyProfilePage) {
