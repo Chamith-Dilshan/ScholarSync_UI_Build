@@ -91,15 +91,10 @@ class _NavBarState extends State<NavBar> {
                
             },
           ),
-         
-       
         ],
       ),
     );
   }
-
-  
-
   // Function to navigate to the provided page
   void navigateToPage(Widget page) {
     Navigator.push(

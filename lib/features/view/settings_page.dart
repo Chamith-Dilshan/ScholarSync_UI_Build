@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
+import 'package:scholars_mobileapp/features/view/login_page.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholars_mobileapp/common/custom_textfield.dart';
+import 'package:scholars_mobileapp/constants/ui_constants.dart';
+// import 'package:scholars_mobileapp/theme/app_theme.dart';
+// import 'package:scholars_mobileapp/features/view/home_page.dart';
+=======
 import 'package:scholarsync/common/nav_bar.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/features/view/login_page.dart';
@@ -7,6 +16,7 @@ import 'package:scholarsync/common/custom_textfield.dart';
 import 'package:scholarsync/constants/ui_constants.dart';
 // import 'package:scholarsync/theme/app_theme.dart';
 // import 'package:scholarsync/features/view/home_page.dart';
+
 
 
 class SettingsPage extends StatelessWidget {
@@ -164,12 +174,7 @@ body: Padding(
       ),
      
 
-  bottomNavigationBar: NavBar(
-          onItemSelected: (int index) {
-            // Handle navigation or actions based on the selected index
-            // For example
-          },
-        ),
+ 
       );
     
   }

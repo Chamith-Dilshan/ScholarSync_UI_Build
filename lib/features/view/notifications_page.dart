@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:scholars_mobileapp/constants/icon_constants.dart';
+import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholars_mobileapp/common/custom_textfield.dart';
+import 'package:scholars_mobileapp/constants/ui_constants.dart';
+import 'package:scholars_mobileapp/features/view/login_page.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/theme/palette.dart';
 import 'package:scholarsync/common/custom_textfield.dart';
 import 'package:scholarsync/constants/ui_constants.dart';
 import 'package:scholarsync/features/view/login_page.dart';
+
 
 
 class NotificationsPage extends StatelessWidget {
@@ -68,7 +74,7 @@ const NotificationsPage({Key? key}) : super(key: key);
                 backIconScale: 50,
                 borderColor: Colors.transparent,
                 borderWidth: 0,
-                backgroundColor: PaletteLightMode.backgroundColor,
+                backgroundColor: Colors.white,
                 boxwidth: 369.84,
                 boxheight: 75,
                 borderRadius:10,
@@ -109,7 +115,7 @@ const NotificationsPage({Key? key}) : super(key: key);
                 backIconScale: 50,
                 borderColor: PaletteLightMode.transparentColor,
                 borderWidth: 0,
-                backgroundColor: PaletteLightMode.backgroundColor,
+                backgroundColor: Colors.white,
                 boxwidth: 369.84,
                 boxheight: 75,
                 borderRadius:10,
@@ -130,7 +136,7 @@ const NotificationsPage({Key? key}) : super(key: key);
 
     ],)
    ),
-      );
+    );
   }
 }
 
