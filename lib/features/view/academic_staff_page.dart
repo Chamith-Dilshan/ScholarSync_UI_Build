@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/features/widgets/academic_staff_page_tab.dart';
-import 'package:scholars_mobileapp/features/widgets/lecturer_info.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/constants/ui_constants.dart';
+import 'package:scholarsync/features/widgets/academic_staff_page_tab.dart';
+import 'package:scholarsync/features/widgets/lecturer_info.dart';
 
 class AcademicStaffPage extends StatefulWidget {
   const AcademicStaffPage({super.key});

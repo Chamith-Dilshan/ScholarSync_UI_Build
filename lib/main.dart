@@ -1,6 +1,6 @@
 import 'package:calendar_view/calendar_view.dart';
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/theme/app_theme.dart';
+import 'package:scholarsync/theme/app_theme.dart';
 import 'common/bottom_nav_bar.dart';
 import 'features/view/calendar_page.dart';
 import 'features/view/home_page.dart';

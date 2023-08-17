@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/constants/image_constants.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/constants/image_constants.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 class ProfileInfo extends StatelessWidget {
   const ProfileInfo({super.key});

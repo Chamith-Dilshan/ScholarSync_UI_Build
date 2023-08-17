@@ -1,13 +1,13 @@
 // ignore_for_file: deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:scholars_mobileapp/common/project_box.dart';
-import 'package:scholars_mobileapp/common/reusable_form_dialog.dart';
-import 'package:scholars_mobileapp/common/search_bar.dart';
-import 'package:scholars_mobileapp/common/text_form_field.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/common/project_box.dart';
+import 'package:scholarsync/common/reusable_form_dialog.dart';
+import 'package:scholarsync/common/search_bar.dart';
+import 'package:scholarsync/common/text_form_field.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/constants/ui_constants.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 void main() {
   runApp(const MyProjectsPage());

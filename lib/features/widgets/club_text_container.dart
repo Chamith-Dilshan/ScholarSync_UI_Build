@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/theme/palette.dart';
 import 'package:expandable_text/expandable_text.dart';
 
 class CustomTextContainer extends StatefulWidget {

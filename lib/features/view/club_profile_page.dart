@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:scholars_mobileapp/features/widgets/circular_icon_button.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/constants/ui_constants.dart';
-import 'package:scholars_mobileapp/constants/image_constants.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/features/widgets/circular_icon_button.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
+import 'package:scholarsync/constants/ui_constants.dart';
+import 'package:scholarsync/constants/image_constants.dart';
+import 'package:scholarsync/theme/palette.dart';
 import '../../common/custom_elevated_button.dart';
 import '../../common/reusable_form_dialog.dart';
 import '../../common/text_form_field.dart';

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
+import 'package:scholarsync/theme/palette.dart';
 
 class ProjectBox extends StatelessWidget {
   final String projectNumber;

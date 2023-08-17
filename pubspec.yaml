@@ -1,4 +1,4 @@
-name: scholars_mobileapp
+name: scholarsync
 description: A new Flutter project.
 publish_to: 'none'
 version: 0.1.0
@@ -7,7 +7,6 @@ environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
-  appwrite: ^9.0.1
   calendar_view: ^1.0.3
   cupertino_icons: ^1.0.5
   device_preview: ^1.1.0
