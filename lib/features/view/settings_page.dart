@@ -1,14 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/features/view/login_page.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
-import 'package:scholars_mobileapp/common/custom_textfield.dart';
-import 'package:scholars_mobileapp/constants/ui_constants.dart';
-// import 'package:scholars_mobileapp/theme/app_theme.dart';
-// import 'package:scholars_mobileapp/features/view/home_page.dart';
-=======
-import 'package:scholarsync/common/nav_bar.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/features/view/login_page.dart';
 import 'package:scholarsync/theme/palette.dart';
@@ -48,7 +38,7 @@ const SettingsPage({Key? key}) : super(key: key);
        backgroundColor: PaletteLightMode.backgroundColor,
       //body
 body: Padding(
-        padding: const EdgeInsets.all(10.0),
+         padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

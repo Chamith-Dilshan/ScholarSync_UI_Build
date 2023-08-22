@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scholarsync/common/button_icon.dart';
 
+
 class CustomTextField extends StatelessWidget {
   final String firstLine;
   final String? secondPartFirstline;
@@ -28,6 +29,7 @@ class CustomTextField extends StatelessWidget {
   final double boxheight;
   final double borderRadius;
   final double padding;
+
 
   const CustomTextField({super.key,
     required this.firstLine,
@@ -66,10 +68,12 @@ class CustomTextField extends StatelessWidget {
         height: boxheight,
         padding: EdgeInsets.all(padding),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(borderRadius),
+          borderRadius:BorderRadius.circular(10),
           color: backgroundColor,
           border: Border.all(color: borderColor, width: borderWidth),
+          
         ),
+        
         child: Row(
           children: [ 
             if (frontIcon != null)
