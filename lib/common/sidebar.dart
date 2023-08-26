@@ -5,15 +5,15 @@ import 'package:scholarsync/features/view/academic_staff_page.dart';
 import 'package:scholarsync/features/view/give_feedback.dart';
 import 'package:scholarsync/features/view/login_page.dart';
 
-class Sidebaryy extends StatefulWidget {
-  const Sidebaryy({Key? key}) : super(key: key);
+class Sidebar extends StatefulWidget {
+  const Sidebar({Key? key}) : super(key: key);
 
 
   @override
-  State<Sidebaryy> createState() => _SidebaryyState();
+  State<Sidebar> createState() => _SidebaryyState();
 }
 
-class _SidebaryyState extends State<Sidebaryy> {
+class _SidebaryyState extends State<Sidebar> {
 
   @override
   Widget build(BuildContext context) {
