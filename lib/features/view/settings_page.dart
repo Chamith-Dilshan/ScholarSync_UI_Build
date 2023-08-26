@@ -1,14 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'package:scholars_mobileapp/constants/icon_constants.dart';
-import 'package:scholars_mobileapp/features/view/login_page.dart';
-import 'package:scholars_mobileapp/theme/palette.dart';
-import 'package:scholars_mobileapp/common/custom_textfield.dart';
-import 'package:scholars_mobileapp/constants/ui_constants.dart';
-// import 'package:scholars_mobileapp/theme/app_theme.dart';
-// import 'package:scholars_mobileapp/features/view/home_page.dart';
-=======
-import 'package:scholarsync/common/nav_bar.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/features/view/login_page.dart';
 import 'package:scholarsync/theme/palette.dart';
@@ -48,7 +38,7 @@ const SettingsPage({Key? key}) : super(key: key);
        backgroundColor: PaletteLightMode.backgroundColor,
       //body
 body: Padding(
-        padding: const EdgeInsets.all(10.0),
+         padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -62,7 +52,19 @@ body: Padding(
             ),
             const SizedBox(height: 10),
             //settings widget 01
-            Center(
+
+             Container(
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: PaletteLightMode.shadowColor,
+                    offset: Offset(8, 8),
+                    blurRadius: 24,
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+            child: Center(
               child: CustomTextField(
                 firstLine: "Receive Notifications",
                 firstLineStyle: const TextStyle(
@@ -92,6 +94,7 @@ body: Padding(
                 padding: 16,
               ),
             ),
+             ),
 
 // Add spacing between the CustomTextField and the new Text widget
 
@@ -105,7 +108,19 @@ body: Padding(
               ),
             ),
 //settings widget 02
-          Center(
+
+           Container(
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: PaletteLightMode.shadowColor,
+                    offset: Offset(8, 8),
+                    blurRadius: 24,
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+         child: Center(
               child: CustomTextField(
                 firstLine: "Dark Mode",
                 firstLineStyle: const TextStyle(
@@ -135,9 +150,21 @@ body: Padding(
                 padding: 16,
               ),
             ),
+          ),
              const SizedBox(height: 10),
 //settings widget 03
-             Center(
+             Container(
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: PaletteLightMode.shadowColor,
+                    offset: Offset(8, 8),
+                    blurRadius: 24,
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+             child:Center(
               child: CustomTextField(
                 firstLine: "Auto Dark Mode",
                 firstLineStyle: const TextStyle(
@@ -167,6 +194,7 @@ body: Padding(
                 padding: 16,
               ),
             ),
+             ),
 
           ],
         ),
