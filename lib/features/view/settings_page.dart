@@ -52,7 +52,19 @@ body: Padding(
             ),
             const SizedBox(height: 10),
             //settings widget 01
-            Center(
+
+             Container(
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: PaletteLightMode.shadowColor,
+                    offset: Offset(8, 8),
+                    blurRadius: 24,
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+            child: Center(
               child: CustomTextField(
                 firstLine: "Receive Notifications",
                 firstLineStyle: const TextStyle(
@@ -82,6 +94,7 @@ body: Padding(
                 padding: 16,
               ),
             ),
+             ),
 
 // Add spacing between the CustomTextField and the new Text widget
 
@@ -95,7 +108,19 @@ body: Padding(
               ),
             ),
 //settings widget 02
-          Center(
+
+           Container(
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: PaletteLightMode.shadowColor,
+                    offset: Offset(8, 8),
+                    blurRadius: 24,
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+         child: Center(
               child: CustomTextField(
                 firstLine: "Dark Mode",
                 firstLineStyle: const TextStyle(
@@ -125,9 +150,21 @@ body: Padding(
                 padding: 16,
               ),
             ),
+          ),
              const SizedBox(height: 10),
 //settings widget 03
-             Center(
+             Container(
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: PaletteLightMode.shadowColor,
+                    offset: Offset(8, 8),
+                    blurRadius: 24,
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+             child:Center(
               child: CustomTextField(
                 firstLine: "Auto Dark Mode",
                 firstLineStyle: const TextStyle(
@@ -157,6 +194,7 @@ body: Padding(
                 padding: 16,
               ),
             ),
+             ),
 
           ],
         ),
