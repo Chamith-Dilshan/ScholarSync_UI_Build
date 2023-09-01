@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/theme/palette.dart';
 
 class ProjectBox extends StatelessWidget {
@@ -17,8 +19,8 @@ class ProjectBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return Container(
-    padding: const EdgeInsets.all(15),
+    return Container(
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: PaletteLightMode.backgroundColor,
         borderRadius: BorderRadius.circular(8),
@@ -37,10 +39,9 @@ class ProjectBox extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              //have to add a icon into icon folder
-              const Icon(Icons.folder),//icon: SvgPicture.asset(IconConstants.folderIcon),
+              SvgPicture.asset(IconConstants.projectManagementIcon),
               Text('Project $projectNumber'),
-              const Icon(Icons.more_horiz),
+              SvgPicture.asset(IconConstants.horizontalDotsIcon),
             ],
           ),
           const SizedBox(height: 20),
@@ -55,17 +56,14 @@ class ProjectBox extends StatelessWidget {
           const Spacer(),
           Row(
             children: [
-              
               const SizedBox(width: 0.5),
               SizedBox(
-                width: 60, 
-                height: 20,
-                child: Text(
-                  date, 
-                  style: const TextStyle(
-                    fontSize: 11),
-                    )
-                    ),
+                  width: 60,
+                  height: 20,
+                  child: Text(
+                    date,
+                    style: const TextStyle(fontSize: 11),
+                  )),
               const Spacer(),
               Container(
                 width: 50,
@@ -74,28 +72,24 @@ class ProjectBox extends StatelessWidget {
                   shape: BoxShape.rectangle,
                   color: PaletteLightMode.secondaryGreenColor,
                   borderRadius: BorderRadius.circular(7),
-                
                 ),
                 child: const Padding(
-                  padding:  EdgeInsets.only(left: 2,right: 2),
-                  child:  Center(
+                  padding: EdgeInsets.only(left: 2, right: 2),
+                  child: Center(
                     child: Text(
-                              'GitHub',
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: PaletteLightMode.whiteColor
-                              ),
-                            ),
+                      'GitHub',
+                      style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold,
+                          color: PaletteLightMode.whiteColor),
+                    ),
                   ),
                 ),
               ),
             ],
-          ),          
+          ),
         ],
       ),
     );
   }
 }
-
-

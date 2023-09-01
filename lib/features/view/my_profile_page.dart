@@ -13,14 +13,6 @@ class MyProfilePage extends StatefulWidget {
 }
 
 class _MyProfilePageState extends State<MyProfilePage> {
- /* int _currentIndex = 0;
-
-  void _onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }*/
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,12 +22,6 @@ class _MyProfilePageState extends State<MyProfilePage> {
         fontWeight: FontWeight.w600,
         titleCenter: false,
         backIcon: IconConstants.hamburgerMenuIcon,
-        onFrontIconButtonpressed: () {
-          /* Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const LogInPage()),
-          );*/
-        },
         onBackIconButtonpressed: () {
           /* Navigator.push(
             context,
@@ -43,16 +29,16 @@ class _MyProfilePageState extends State<MyProfilePage> {
           );*/
         },
       ),
-    body: Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-         const Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
             child: ProfileInfo(),
           ),
           const SizedBox(height: 11),
           Padding(
-            padding: const EdgeInsets.only(left: 25,right: 25),
+            padding: const EdgeInsets.only(left: 25, right: 25),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -80,46 +66,47 @@ class _MyProfilePageState extends State<MyProfilePage> {
           ),
           const SizedBox(height: 5),
           Expanded(
-              child: GridView.count(
-                crossAxisCount: 2,
-                mainAxisSpacing: 18.0,
-                crossAxisSpacing: 25.0,
-                padding: const EdgeInsets.only(left: 25,right: 25),
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  left: 5, right: 5, bottom: 25), // Add bottom padding
+              child: Scrollbar(
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 18.0,
+                  crossAxisSpacing: 25.0,
+                  padding: const EdgeInsets.only(left: 25, right: 25),
                   children: const [
-                      ProjectBox(
-                         projectNumber: '1',
-                         projectName: 'Project Name 1',
-                         date: '2023-07-23',
-                         githubLink: 'https://github.com/project1',
-                      ),
-                      ProjectBox(
-                         projectNumber: '2',
-                         projectName: 'Project Name 2',
-                         date: '2023-07-24',
-                         githubLink: 'https://github.com/project2',
-                      ),
-                      ProjectBox(
-                         projectNumber: '3',
-                         projectName: 'Project Name 3',
-                         date: '2023-07-25',
-                         githubLink: 'https://github.com/project3',
-                      ),
-                      ProjectBox(
-                        projectNumber: '4',
-                        projectName: 'Project Name 4',
-                        date: '2023-07-26',
-                       githubLink: 'https://github.com/project4',
-                      ),
-        ],
-        ),
-        ),
+                    ProjectBox(
+                      projectNumber: '1',
+                      projectName: 'Project Name 1',
+                      date: '2023-07-23',
+                      githubLink: 'https://github.com/project1',
+                    ),
+                    ProjectBox(
+                      projectNumber: '2',
+                      projectName: 'Project Name 2',
+                      date: '2023-07-24',
+                      githubLink: 'https://github.com/project2',
+                    ),
+                    ProjectBox(
+                      projectNumber: '3',
+                      projectName: 'Project Name 3',
+                      date: '2023-07-25',
+                      githubLink: 'https://github.com/project3',
+                    ),
+                    ProjectBox(
+                      projectNumber: '4',
+                      projectName: 'Project Name 4',
+                      date: '2023-07-26',
+                      githubLink: 'https://github.com/project4',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
-
-    /*     bottomNavigationBar: MyBottomNavigationBar(
-           currentIndex: _currentIndex,
-           onTabTapped: _onTabTapped,
-        ),*/
     );
   }
 }
