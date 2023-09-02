@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/constants/ui_constants.dart';
 import 'package:scholarsync/theme/palette.dart';
+import 'package:scholarsync/model/event_data.dart';
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({Key? key}) : super(key: key);
@@ -13,62 +14,54 @@ class CalendarPage extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<CalendarPage> {
-  final DateTime _currentStartDate = DateTime.now();
-  DateFormat monthYearFormat = DateFormat('MMMM yyyy');
-  String monthYearText = '';
+  DateFormat monthYearFormat = DateFormat('dd MMMM yyyy');
+  EventController eventController = EventController();
 
   @override
   void initState() {
     super.initState();
-    updateMonthYearText(_currentStartDate);
+    eventController.addAll(eventdata);
   }
 
-  void updateMonthYearText(DateTime date){
-    setState(() {
-      monthYearText = monthYearFormat.format(date);
-    });
+  @override
+  void dispose() {
+    super.dispose();
+    eventController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIConstants.appBar(title: 'Calendar', 
-      fontSize: 22, 
-      fontWeight:FontWeight.w600, 
-      titleCenter: false, 
-      backIcon: IconConstants.hamburgerMenuIcon, 
-      onBackIconButtonpressed: (){
-        //Icon funtion
-      }
+      appBar: UIConstants.appBar(
+          title: 'Calendar',
+          fontSize: 22,
+          fontWeight: FontWeight.w600,
+          titleCenter: false,
+          backIcon: IconConstants.hamburgerMenuIcon,
+          onBackIconButtonpressed: () {
+            //Icon funtion
+          }
       ),
-      body: WeekView(
-        showLiveTimeLineInAllDays: false,
-        width: MediaQuery.of(context).size.width,
-        minDay: DateTime(2020, 01, 01),
-        maxDay: DateTime(2030, 12, 31),
-        initialDay: DateTime.now(),
-        startDay: WeekDays.sunday,
-        weekTitleHeight: 60,
-
+      body: DayView(
+        controller: eventController,
+        showVerticalLine: true,
+        minDay: DateTime(2020),
+        maxDay: DateTime(2030),
+        heightPerMinute: 1,
+        scrollPhysics: const BouncingScrollPhysics(),
+        pageViewPhysics: const BouncingScrollPhysics(),
         headerStyle: const HeaderStyle(
-          headerTextStyle:TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
-          decoration: BoxDecoration(
-            color: PaletteLightMode.backgroundColor,
-          )
-        ),
-        headerStringBuilder:(date, {secondaryDate}) {
+            headerTextStyle: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+            decoration: BoxDecoration(
+              color: PaletteLightMode.backgroundColor,
+            )),
+        dateStringBuilder: (date, {secondaryDate}) {
           return monthYearFormat.format(date);
         },
-        
-        onPageChange: (date, index) {
-          final newStartDate = DateTime(_currentStartDate.year,index + 1,1);
-          setState(() {
-            updateMonthYearText(newStartDate);
-          });
-        },       
+        onEventTap: (events, date) => print(events),
       ),
     );
   }

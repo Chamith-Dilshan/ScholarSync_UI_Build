@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.only(left: 8,right: 8,top: 8,bottom: 0),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
               //carousel
               Carousel(
                 imageList: const [
-                  ImageConstants.kuppi1,
+                  ImageConstants.aiesec3,
                   ImageConstants.aiesec1,
                   ImageConstants.aiesec2,
                   ImageConstants.aiesec3,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scholarsync/features/widgets/carousel.dart';
 import 'package:scholarsync/features/widgets/circular_icon_button.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/constants/ui_constants.dart';
@@ -8,7 +9,6 @@ import '../../common/custom_elevated_button.dart';
 import '../../common/reusable_form_dialog.dart';
 import '../../common/text_form_field.dart';
 import '../widgets/club_text_container.dart';
-import '../widgets/custom_carousel.dart';
 
 class ClubProfilePage extends StatefulWidget {
   const ClubProfilePage({Key? key}) : super(key: key);
@@ -104,15 +104,16 @@ class _ClubProfilePageState extends State<ClubProfilePage> {
                 ),
               ),
               const SizedBox(height: 15),
-              CustomCarousel(
-                imageList: const [
-                  ImageConstants.aiesec1,
-                  ImageConstants.aiesec2,
-                  ImageConstants.aiesec3,
-                ],
-                containerPadding: 20.0,
-                showIconButton: isOwner ? true : false,
-                enableAutoScroll: isOwner ? false : true,
+              Carousel(imageList: const [
+                ImageConstants.aiesec1,
+                ImageConstants.aiesec2,
+                ImageConstants.aiesec3,
+              ],
+              autoScrolling: isOwner ? false : true,
+              showIconButton: isOwner ? true : false,
+              onPressedDeleteButton: (){
+                //delete button logic
+              }
               ),
             ],
           ),

@@ -110,11 +110,7 @@ class _CarouselState extends State<Carousel> {
 
                     return GestureDetector(
                       onTap: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text("You tapped at $index"),
-                          ),
-                        );
+                        
                       },
                       onPanDown: (d) {
                         if (enableTaprecognizer) {
