@@ -4,10 +4,13 @@ import 'package:scholarsync/common/search_bar.dart';
 import 'package:scholarsync/common/sidebar.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/constants/image_constants.dart';
+import 'package:scholarsync/features/view/my_profile_page.dart';
 import '../../common/text_container.dart';
 import '../../theme/palette.dart';
 import '../widgets/carousel.dart';
 import '../widgets/image_row.dart';
+import 'package:scholarsync/common/drawer_menu.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -86,7 +89,8 @@ class _HomePageState extends State<HomePage> {
             ),
             tooltip: 'Menu',
             onPressed: () {
-              //Open the Sidebar
+ 
+
             },
           ),
         ],

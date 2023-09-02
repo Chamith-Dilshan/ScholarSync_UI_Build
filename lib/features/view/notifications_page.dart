@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scholarsync/common/drawer_menu.dart';
 import 'package:scholarsync/constants/icon_constants.dart';
 import 'package:scholarsync/theme/palette.dart';
 import 'package:scholarsync/common/custom_textfield.dart';
@@ -22,7 +23,7 @@ const NotificationsPage({Key? key}) : super(key: key);
         onBackIconButtonpressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const LogInPage()),
+            MaterialPageRoute(builder: (context) => const DrawerMenu(selectedIndex: 0,)),
           );
         },
       ),
