@@ -9,7 +9,7 @@ class ImageConstants {
   static const String clubcarousel1 = '$_imagepath/club_carousel1.jpeg';
   static const String clubcarousel2 = '$_imagepath/club_carousel2.jpeg';
   static const String clubcarousel3 = '$_imagepath/club_carousel3.jpeg';
-  static const String profileImage = '$_imagepath/profileImg.png"';
+  static const String profileImage = '$_imagepath/student_profile.png';
   static const String clubIcon1 = '$_imagepath/Club1_cogni.png';
   static const String clubIcon2 = '$_imagepath/Club2_DevApp.png';
   static const String clubIcon3 = '$_imagepath/Club3_HackShield.png';
@@ -26,4 +26,10 @@ class ImageConstants {
   static const String eventImg5 = '$_imagepath/event5_music.png';
   static const String eventImg6 = '$_imagepath/event6_beachcleanup.png';
   static const String eventImg7 = '$_imagepath/event7_mobileappdev.png';
+  static const String femaleLecturer1 = '$_imagepath/avatar_girl.png';
+  static const String maleLecturer1 = '$_imagepath/avatar_man.png';
+  static const String femaleLecturer2 = '$_imagepath/avatar-female.png';
+  static const String maleLecturer2 = '$_imagepath/avatar-male.png';
+  static const String femaleLecturer3 = '$_imagepath/Avatar-Woman2.jpg';
+  static const String maleLecturer3 = '$_imagepath/Avatar-Man.jpg';
 }

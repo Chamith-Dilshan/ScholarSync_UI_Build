@@ -56,20 +56,20 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
                 ListView(
                   children: const [
                     LecturerInformation(
-                      name: 'Lecturer 1',
-                      email: 'lecturer1@example.com',
+                      name: 'Mrs. Sophia Williams',
+                      email: 'sophiawilliams@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer1.jpg',
                     ),
                     LecturerInformation(
-                      name: 'Lecturer 2',
-                      email: 'lecturer2@example.com',
+                      name: 'Mrs. Olivia Johnson',
+                      email: 'oliviajohnson@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer2.jpg',
                     ),
                     LecturerInformation(
-                      name: 'Lecturer 1',
-                      email: 'lecturer1@example.com',
+                      name: 'Mr. Liam Smith',
+                      email: 'liamsmith@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer1.jpg',
                     ),
@@ -79,16 +79,22 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
                 ListView(
                   children: const [
                     LecturerInformation(
-                      name: 'Lecturer 3',
-                      email: 'lecturer3@example.com',
+                      name: 'Mr. Roland Stern',
+                      email: 'rolandstern@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer3.jpg',
                     ),
                     LecturerInformation(
-                      name: 'Lecturer 4',
-                      email: 'lecturer4@example.com',
+                      name: 'Mr. Jackson Wang',
+                      email: 'jacksonwang@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer4.jpg',
+                    ),
+                    LecturerInformation(
+                      name: 'Mrs. Stephanie Hartley',
+                      email: 'stephaniehartley@gmail.com',
+                      //have to add the images
+                      photoAsset: 'assets/lecturer1.jpg',
                     ),
                     // Add more lecturer information boxes for department 2
                   ],
@@ -96,16 +102,22 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
                 ListView(
                   children: const [
                     LecturerInformation(
-                      name: 'Lecturer 5',
-                      email: 'lecturer5@example.com',
+                      name: 'Mrs. Nancy Wheeler',
+                      email: 'nancywheeler@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer5.jpg',
                     ),
                     LecturerInformation(
-                      name: 'Lecturer 6',
-                      email: 'lecturer6@example.com',
+                      name: 'Mrs. Joyce Byers',
+                      email: 'joycebyers@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer6.jpg',
+                    ),
+                    LecturerInformation(
+                      name: 'Mr. Dustin Henderson',
+                      email: 'dustinhenderson@gmail.com',
+                      //have to add the images
+                      photoAsset: 'assets/lecturer1.jpg',
                     ),
                     // Add more lecturer information boxes for department 3
                   ],
@@ -113,16 +125,22 @@ class _AcademicStaffPageState extends State<AcademicStaffPage>
                 ListView(
                   children: const [
                     LecturerInformation(
-                      name: 'Lecturer 7',
-                      email: 'lecturer7@example.com',
+                      name: 'Mrs. Monet Addams',
+                      email: 'monetaddams@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer7.jpg',
                     ),
                     LecturerInformation(
-                      name: 'Lecturer 8',
-                      email: 'lecturer8@example.com',
+                      name: 'Mr. Lucas Sinclair',
+                      email: 'lucassinclair@gmail.com',
                       //have to add the images
                       photoAsset: 'assets/lecturer8.jpg',
+                    ),
+                    LecturerInformation(
+                      name: 'Mrs. Naomi Watson',
+                      email: 'naomiwatson@gmail.com',
+                      //have to add the images
+                      photoAsset: 'assets/lecturer1.jpg',
                     ),
                     // Add more lecturer information boxes for department 4
                   ],
