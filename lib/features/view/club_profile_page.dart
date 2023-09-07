@@ -19,11 +19,11 @@ class ClubProfilePage extends StatefulWidget {
 
 class _ClubProfilePageState extends State<ClubProfilePage> {
   bool isOwner = false;
-  String clubName = 'AIESEC in NSBM';
+  String clubName = "Gamer's Guide";
   String about =
-      'AIESEC is the world’s largest youth led organization advocating for youth leadership through global affairs. AIESEC in NSBM has over 90+ active global-minded and culturally sensitive members from across the island. As an Ofﬁcial Expansion, we have won the Most Outstanding Award and Most Progressive Expansion Award in 2018 & 2019, respectively.';
-  String masterInCharge = 'Ms. Gimhani Ranagalla\nMs. Dilki Hansika';
-  String president = 'Sachin Hettiarachchi';
+      'Tech enthusiasts unite for gaming, development, workshops, discussions, hackathons, and showcases, merging passion for gaming with technical expertise.';
+  String masterInCharge = 'Ms. Gwen Stacy';
+  String president = 'Peter Parker';
 
   @override
   Widget build(BuildContext context) {
@@ -104,17 +104,17 @@ class _ClubProfilePageState extends State<ClubProfilePage> {
                 ),
               ),
               const SizedBox(height: 15),
-              Carousel(imageList: const [
-                ImageConstants.aiesec1,
-                ImageConstants.aiesec2,
-                ImageConstants.aiesec3,
-              ],
-              autoScrolling: isOwner ? false : true,
-              showIconButton: isOwner ? true : false,
-              onPressedDeleteButton: (){
-                //delete button logic
-              }
-              ),
+              Carousel(
+                  imageList: const [
+                    ImageConstants.clubcarousel1,
+                    ImageConstants.clubcarousel2,
+                    ImageConstants.clubcarousel3,
+                  ],
+                  autoScrolling: isOwner ? false : true,
+                  showIconButton: isOwner ? true : false,
+                  onPressedDeleteButton: () {
+                    //delete button logic
+                  }),
             ],
           ),
         ),
@@ -186,7 +186,7 @@ class _ClubProfilePageState extends State<ClubProfilePage> {
           ),
           child: const Center(
             child: CircleAvatar(
-              backgroundImage: AssetImage(ImageConstants.clubDP1),
+              backgroundImage: AssetImage(ImageConstants.clubIcon6),
               radius: imageSize / 2,
             ),
           ),
