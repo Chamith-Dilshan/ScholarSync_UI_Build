@@ -24,12 +24,12 @@ class ProjectBox extends StatelessWidget {
       decoration: BoxDecoration(
         color: PaletteLightMode.backgroundColor,
         borderRadius: BorderRadius.circular(8),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
-            color: PaletteLightMode.shadowColor.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 4,
-            offset: const Offset(0, 2),
+            color: PaletteLightMode.shadowColor,
+            offset: Offset(8, 8),
+            blurRadius: 24,
+            spreadRadius: 0,
           ),
         ],
       ),

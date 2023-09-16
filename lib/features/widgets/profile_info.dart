@@ -31,8 +31,8 @@ class ProfileInfo extends StatelessWidget {
                   children: [
                     const CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage(ImageConstants
-                          .profileImage), // Add your image path here
+                      backgroundImage: AssetImage(
+                          ImageConstants.kuppiImg1), // Add your image path here
                     ),
                     Container(
                       width: 32, // Set the desired width for the container
